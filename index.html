@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GRC Maturity Assessment v10.2</title>
+<title>GRC Maturity Assessment v32.0</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
@@ -40,6 +40,7 @@
     --lgpd:     #15643b;
     --cis:      #0e4f8a;
     --iso42001: #6d28d9;
+    --ai_std: #6d28d9;
     --iso22301: #0369a1;
     --iso22313: #0369a1;
     --iso22320: #0369a1;
@@ -896,7 +897,7 @@
   </div>
 
   <header>
-    <span class="header-tag">GRC Assessment Tool · v10.2</span>
+    <span class="header-tag">GRC Assessment Tool · v32.0</span>
     <h1>Avaliação de Maturidade<br>em GRC</h1>
     <p>Avalie o nível de maturidade da sua organização em GRC com base nos frameworks ISO 31000, ISO 27001, COSO, COBIT, NIST CSF e LGPD. Os resultados seguem os <strong style="color:var(--accent)">5 níveis CMMI</strong>: Inicial → Gerenciado → Definido → Gerenciado Quantitativamente → Em Otimização.</p>
     <div class="authorship">© Desenvolvido por <strong>William Evaristo</strong> · Todos os direitos reservados</div>
@@ -920,7 +921,7 @@
         <option value="iso22">📋 ISO 22300 — Segurança e Resiliência</option>
         <option value="iso27">🔐 ISO/IEC 27000 — Segurança da Informação</option>
         <option value="riscos">⚠️ ISO 31000 — Gestão de Riscos</option>
-        <option value="tecnologia">🤖 ISO/IEC 42001 — Inteligência Artificial</option>
+        <option value="tecnologia">🤖 ISO/IEC SC 42 — Inteligência Artificial</option>
         <option value="governanca">🏛️ Governança Corporativa e Organizacional</option>
         <option value="ciberseguranca">🛡️ Cibersegurança</option>
         <option value="privacidade">🔏 Privacidade e Dados</option>
@@ -2272,6 +2273,446 @@ const FRAMEWORKS = {
       },
     ]
   },
+  iso22989: {
+    label: 'ISO/IEC 22989',
+    subtitle: 'Conceitos e Terminologia de IA',
+    color: '#6d28d9',
+    group: 'tecnologia',
+    sections: [
+      {
+        id: '22989_conceitos', title: 'Conceitos Fundamentais de IA', desc: 'Terminologia e conceitos essenciais para sistemas de IA',
+        questions: [
+          'A organização adota e aplica consistentemente a terminologia padronizada da ISO/IEC 22989 em suas políticas e documentos de IA.',
+          'Os conceitos fundamentais de IA (aprendizado de máquina, redes neurais, sistemas inteligentes) estão claramente definidos internamente.',
+          'A comunicação sobre sistemas de IA com partes interessadas utiliza terminologia alinhada aos padrões internacionais.',
+          'O glossário de IA da organização é revisado e atualizado periodicamente para refletir atualizações da norma e evolução do campo.',
+        ]
+      },
+      {
+        id: '22989_taxonomia', title: 'Taxonomia e Classificação de Sistemas de IA', desc: 'Categorização e tipologia dos sistemas de IA da organização',
+        questions: [
+          'Os sistemas de IA da organização estão classificados segundo taxonomia baseada na ISO/IEC 22989.',
+          'A classificação dos sistemas de IA considera tipo de aprendizado, domínio de aplicação e nível de autonomia.',
+          'Inventário atualizado de sistemas de IA com sua classificação e características relevantes está mantido.',
+          'A taxonomia de IA adotada facilita a comunicação consistente entre equipes técnicas, de negócios e de governança.',
+        ]
+      },
+      {
+        id: '22989_escopo', title: 'Escopo e Limites dos Sistemas de IA', desc: 'Definição clara do escopo operacional dos sistemas de IA',
+        questions: [
+          'O escopo operacional e os limites de cada sistema de IA estão claramente documentados.',
+          'As capacidades e limitações dos sistemas de IA são comunicadas de forma transparente aos usuários e partes interessadas.',
+          'Condições de operação segura e cenários fora do escopo para cada sistema de IA estão documentados.',
+          'A organização documenta formalmente as premissas e restrições de uso de cada sistema de IA em produção.',
+        ]
+      },
+      {
+        id: '22989_melhoria', title: 'Alinhamento com Padrões Internacionais', desc: 'Conformidade terminológica e alinhamento com ecossistema global de IA',
+        questions: [
+          'A organização monitora atualizações da ISO/IEC 22989 e atualiza seus documentos internos de IA conforme necessário.',
+          'Treinamentos sobre terminologia e conceitos de IA são realizados para equipes que desenvolvem e gerenciam sistemas de IA.',
+          'A terminologia de IA adotada é consistente entre todos os documentos, contratos e comunicações da organização.',
+          'Revisões periódicas verificam o alinhamento da documentação interna de IA com a terminologia internacional vigente.',
+        ]
+      },
+    ]
+  },
+  iso23053: {
+    label: 'ISO/IEC 23053',
+    subtitle: 'Framework para Sistemas de IA com ML',
+    color: '#6d28d9',
+    group: 'tecnologia',
+    sections: [
+      {
+        id: '23053_framework', title: 'Framework para Sistemas de IA com Aprendizado de Máquina', desc: 'Estrutura conceitual para desenvolvimento e gestão de sistemas de ML',
+        questions: [
+          'A organização adota o framework da ISO/IEC 23053 como referência para estruturar seus sistemas de IA baseados em ML.',
+          'Os componentes do framework (dados, modelo, inferência, feedback) estão claramente identificados para cada sistema de ML.',
+          'O ciclo de vida dos modelos de ML segue estrutura alinhada ao framework da norma com etapas e responsáveis definidos.',
+          'Interfaces entre componentes dos sistemas de ML estão documentadas e são gerenciadas por processos formais.',
+        ]
+      },
+      {
+        id: '23053_dados', title: 'Gestão de Dados para Aprendizado de Máquina', desc: 'Qualidade, governança e ciclo de vida dos dados de ML',
+        questions: [
+          'Processos formais de coleta, preparação, validação e governança de dados para treinamento de modelos estão implementados.',
+          'A qualidade dos dados de treinamento é avaliada sistematicamente quanto a completude, representatividade e viés.',
+          'Rastreabilidade dos dados utilizados em cada versão de modelo de ML está documentada e mantida.',
+          'Políticas de retenção, atualização e descarte de conjuntos de dados de ML estão estabelecidas e seguidas.',
+        ]
+      },
+      {
+        id: '23053_modelos', title: 'Desenvolvimento e Validação de Modelos', desc: 'Processos para criação, teste e validação de modelos de ML',
+        questions: [
+          'Processo formal de desenvolvimento de modelos de ML inclui experimentação, validação cruzada e testes de desempenho.',
+          'Critérios de aceitação para implantação de modelos estão definidos e são verificados antes da entrada em produção.',
+          'Versionamento de modelos de ML está implementado com rastreabilidade de alterações e possibilidade de rollback.',
+          'Testes de robustez, viés e comportamento adversarial são realizados em todos os modelos antes da implantação.',
+        ]
+      },
+      {
+        id: '23053_operacao', title: 'Operação e Monitoramento de Sistemas de ML', desc: 'Gestão operacional e melhoria contínua de sistemas de ML em produção',
+        questions: [
+          'Monitoramento contínuo do desempenho e comportamento dos modelos de ML em produção está implementado.',
+          'Alertas automáticos para degradação de desempenho, desvios de distribuição e anomalias de modelo estão configurados.',
+          'Processo formal de retreinamento e atualização de modelos de ML é executado com critérios e periodicidade definidos.',
+          'Incidentes envolvendo comportamento inesperado de sistemas de ML são registrados, investigados e documentados.',
+        ]
+      },
+    ]
+  },
+  iso23894: {
+    label: 'ISO/IEC 23894',
+    subtitle: 'Gestão de Riscos de IA',
+    color: '#6d28d9',
+    group: 'tecnologia',
+    sections: [
+      {
+        id: '23894_contexto', title: 'Contexto e Princípios de Gestão de Riscos de IA', desc: 'Fundamentos e contexto para gestão de riscos específicos de IA',
+        questions: [
+          'A organização adotou a ISO/IEC 23894 como referência para gestão de riscos específicos de sistemas de IA.',
+          'O contexto de risco de IA considera riscos técnicos, éticos, legais e de negócio de forma integrada.',
+          'Critérios de risco específicos para IA (tolerância, apetite, aceitação) estão formalmente estabelecidos.',
+          'O processo de gestão de riscos de IA está integrado ao framework corporativo de gestão de riscos e ao SGAI.',
+        ]
+      },
+      {
+        id: '23894_avaliacao', title: 'Avaliação de Riscos de IA', desc: 'Identificação, análise e avaliação de riscos específicos de sistemas de IA',
+        questions: [
+          'Avaliações de risco específicas para cada sistema de IA cobrem riscos de viés, opacidade, falha, uso indevido e impacto social.',
+          'Riscos de IA são avaliados considerando impactos sobre direitos fundamentais, privacidade e segurança de terceiros.',
+          'A organização avalia riscos de IA emergentes (como IA generativa, deepfakes, ataques adversariais) periodicamente.',
+          'As avaliações de risco de IA são documentadas, revisadas e atualizadas conforme evolução dos sistemas e do contexto.',
+        ]
+      },
+      {
+        id: '23894_tratamento', title: 'Tratamento de Riscos de IA', desc: 'Opções e planos de tratamento para riscos identificados em sistemas de IA',
+        questions: [
+          'Planos de tratamento de riscos de IA estão documentados com controles técnicos e organizacionais proporcionais.',
+          'Controles de mitigação de viés, explicabilidade e supervisão humana estão implementados nos sistemas de maior risco.',
+          'Riscos residuais de IA são formalmente aceitos por gestores autorizados com documentação adequada.',
+          'A eficácia dos controles de risco de IA é avaliada periodicamente e os planos de tratamento são atualizados.',
+        ]
+      },
+      {
+        id: '23894_monitoramento', title: 'Monitoramento e Comunicação de Riscos de IA', desc: 'Acompanhamento contínuo e reporte de riscos de IA',
+        questions: [
+          'Indicadores-chave de risco (KRIs) específicos para sistemas de IA estão definidos e monitorados continuamente.',
+          'Relatórios de riscos de IA são produzidos regularmente e apresentados à alta direção e ao órgão de governança.',
+          'A organização comunica riscos de IA às partes interessadas relevantes de forma transparente e tempestiva.',
+          'Lições aprendidas de incidentes de IA são incorporadas ao processo de gestão de riscos para melhoria contínua.',
+        ]
+      },
+    ]
+  },
+  iso5338: {
+    label: 'ISO/IEC 5338',
+    subtitle: 'Ciclo de Vida de Sistemas de IA',
+    color: '#6d28d9',
+    group: 'tecnologia',
+    sections: [
+      {
+        id: '5338_processos', title: 'Processos do Ciclo de Vida de IA', desc: 'Estrutura de processos para o ciclo de vida completo de sistemas de IA',
+        questions: [
+          'Os processos do ciclo de vida de sistemas de IA estão definidos e implementados conforme a ISO/IEC 5338.',
+          'Processos de concepção, desenvolvimento, integração, verificação, validação, implantação e retirada de sistemas de IA estão formalizados.',
+          'Responsáveis por cada processo do ciclo de vida de IA estão designados com autoridades e recursos definidos.',
+          'Os processos do ciclo de vida de IA são integrados aos processos de engenharia de software e gestão de projetos da organização.',
+        ]
+      },
+      {
+        id: '5338_requisitos', title: 'Gestão de Requisitos e Qualidade', desc: 'Definição, rastreabilidade e verificação de requisitos de sistemas de IA',
+        questions: [
+          'Requisitos funcionais, de desempenho, segurança e ética para sistemas de IA são elicitados e documentados sistematicamente.',
+          'Rastreabilidade entre requisitos, decisões de design, implementação e testes de sistemas de IA está mantida.',
+          'Critérios de qualidade específicos para sistemas de IA estão definidos e verificados ao longo do ciclo de vida.',
+          'Processos de gestão de mudanças para sistemas de IA garantem avaliação de impacto antes de alterações em produção.',
+        ]
+      },
+      {
+        id: '5338_verificacao', title: 'Verificação, Validação e Testes', desc: 'Garantia de qualidade e conformidade ao longo do ciclo de vida',
+        questions: [
+          'Planos de verificação e validação específicos para sistemas de IA são elaborados e executados antes da implantação.',
+          'Testes de desempenho, robustez, viés, segurança e comportamento adversarial fazem parte do processo de validação.',
+          'Avaliações de conformidade com requisitos éticos e regulatórios são realizadas antes da implantação de sistemas de IA.',
+          'Resultados de verificação e validação são documentados e aprovados formalmente como condição para entrada em produção.',
+        ]
+      },
+      {
+        id: '5338_retirada', title: 'Operação, Manutenção e Descontinuação', desc: 'Suporte operacional e gestão do fim de vida de sistemas de IA',
+        questions: [
+          'Planos de operação e manutenção de sistemas de IA incluem monitoramento, retreinamento e gestão de versões.',
+          'Critérios para descontinuação de sistemas de IA estão definidos e o processo de retirada é gerenciado formalmente.',
+          'O impacto da descontinuação de sistemas de IA sobre usuários e processos dependentes é avaliado e comunicado.',
+          'Dados, modelos e documentação de sistemas de IA descontinuados são retidos ou descartados conforme política estabelecida.',
+        ]
+      },
+    ]
+  },
+  iso5469: {
+    label: 'ISO/IEC 5469',
+    subtitle: 'Segurança Funcional e Sistemas de IA',
+    color: '#6d28d9',
+    group: 'tecnologia',
+    sections: [
+      {
+        id: '5469_seguranca', title: 'Segurança Funcional em Sistemas de IA', desc: 'Garantia de segurança funcional em sistemas que utilizam IA',
+        questions: [
+          'A organização avalia os requisitos de segurança funcional para sistemas de IA em aplicações críticas.',
+          'Riscos de falha de segurança funcional decorrentes do comportamento de sistemas de IA são identificados e tratados.',
+          'Sistemas de IA em aplicações com impacto na segurança funcional passam por processos de certificação adequados.',
+          'A organização mantém conformidade com normas setoriais de segurança funcional que interagem com IA (IEC 61508, ISO 26262, etc.).',
+        ]
+      },
+      {
+        id: '5469_confiabilidade', title: 'Confiabilidade e Robustez de Sistemas de IA', desc: 'Garantia de comportamento confiável e robusto em condições operacionais',
+        questions: [
+          'Requisitos de confiabilidade e robustez para sistemas de IA em contextos críticos estão formalmente definidos.',
+          'Testes de robustez em condições adversas, dados fora da distribuição e entradas inesperadas são realizados.',
+          'Mecanismos de detecção de falha e modos de operação segura (fail-safe) estão implementados em sistemas de IA críticos.',
+          'O comportamento do sistema de IA em situações de degradação ou falha parcial está documentado e validado.',
+        ]
+      },
+      {
+        id: '5469_supervisao', title: 'Supervisão Humana em Sistemas de IA Críticos', desc: 'Mecanismos de controle e supervisão humana para sistemas de IA',
+        questions: [
+          'Níveis de autonomia dos sistemas de IA estão definidos e a supervisão humana necessária está implementada para cada nível.',
+          'Interfaces de supervisão humana permitem monitoramento, intervenção e override dos sistemas de IA quando necessário.',
+          'Treinamento para operadores de sistemas de IA críticos cobre supervisão, limites do sistema e procedimentos de intervenção.',
+          'A organização avalia regularmente a adequação dos mecanismos de supervisão humana frente à evolução dos sistemas de IA.',
+        ]
+      },
+      {
+        id: '5469_auditoria', title: 'Auditoria e Conformidade de Segurança de IA', desc: 'Avaliação da conformidade com requisitos de segurança funcional de IA',
+        questions: [
+          'Auditorias de segurança funcional cobrindo sistemas de IA são realizadas periodicamente por equipes competentes.',
+          'A conformidade dos sistemas de IA com requisitos de segurança funcional é documentada e verificada.',
+          'Não-conformidades de segurança identificadas em sistemas de IA são tratadas com urgência e ações corretivas documentadas.',
+          'A organização monitora atualizações regulatórias e normativas sobre segurança funcional de IA e adapta seus sistemas.',
+        ]
+      },
+    ]
+  },
+  iso24027: {
+    label: 'ISO/IEC TR 24027',
+    subtitle: 'Viés em Sistemas de IA',
+    color: '#6d28d9',
+    group: 'tecnologia',
+    sections: [
+      {
+        id: '24027_identificacao', title: 'Identificação e Tipos de Viés em IA', desc: 'Compreensão e mapeamento dos tipos de viés em sistemas de IA',
+        questions: [
+          'A organização adotou referencial baseado na ISO/IEC TR 24027 para identificar e classificar vieses em seus sistemas de IA.',
+          'Tipos de viés relevantes (de dados, de algoritmo, de interação humana) são avaliados para cada sistema de IA.',
+          'Mapeamento de fontes potenciais de viés ao longo do ciclo de vida dos sistemas de IA está documentado.',
+          'Equipes que desenvolvem sistemas de IA são treinadas sobre tipos de viés e suas implicações éticas e legais.',
+        ]
+      },
+      {
+        id: '24027_medicao', title: 'Medição e Avaliação de Viés', desc: 'Métricas e metodologias para quantificar viés em sistemas de IA',
+        questions: [
+          'Métricas de equidade e medição de viés são definidas e aplicadas a todos os sistemas de IA que afetam pessoas.',
+          'Avaliações de viés são realizadas em dados de treinamento, modelos e resultados de inferência de forma regular.',
+          'Resultados das avaliações de viés são documentados, comparados com limiares aceitáveis e reportados à gestão.',
+          'Ferramentas e metodologias de detecção de viés são mantidas atualizadas com o estado da arte do campo.',
+        ]
+      },
+      {
+        id: '24027_mitigacao', title: 'Mitigação de Viés em Sistemas de IA', desc: 'Estratégias e controles para reduzir viés nos sistemas de IA',
+        questions: [
+          'Estratégias de mitigação de viés são implementadas nas fases de dados, modelagem e pós-processamento conforme necessário.',
+          'A eficácia das medidas de mitigação de viés é avaliada e documentada com evidências objetivas.',
+          'Trade-offs entre mitigação de viés e outras propriedades dos modelos (desempenho, eficiência) são avaliados e documentados.',
+          'O monitoramento contínuo de viés em sistemas de IA em produção é realizado com alertas para desvios significativos.',
+        ]
+      },
+      {
+        id: '24027_governanca', title: 'Governança de Equidade em IA', desc: 'Estrutura organizacional para gestão de equidade e viés em IA',
+        questions: [
+          'Responsabilidades para gestão de viés e equidade em IA estão atribuídas a papéis específicos na organização.',
+          'Políticas de equidade em IA estão documentadas e comunicadas a todas as equipes que desenvolvem sistemas de IA.',
+          'Casos de viés identificado em sistemas de IA são tratados como incidentes com investigação e ação corretiva formais.',
+          'A organização reporta externamente sobre suas práticas de gestão de viés quando exigido por regulação ou por comprometimento voluntário.',
+        ]
+      },
+    ]
+  },
+  iso24028: {
+    label: 'ISO/IEC TR 24028',
+    subtitle: 'Confiabilidade em IA',
+    color: '#6d28d9',
+    group: 'tecnologia',
+    sections: [
+      {
+        id: '24028_fundamentos', title: 'Fundamentos de Confiabilidade em IA', desc: 'Princípios e dimensões da confiabilidade de sistemas de IA',
+        questions: [
+          'A organização adotou framework baseado na ISO/IEC TR 24028 para avaliar e desenvolver a confiabilidade de seus sistemas de IA.',
+          'As dimensões de confiabilidade (robustez, explicabilidade, privacidade, segurança, equidade) são avaliadas para cada sistema de IA.',
+          'Requisitos de confiabilidade são definidos para cada sistema de IA com base em seu contexto de uso e risco.',
+          'A confiabilidade dos sistemas de IA é comunicada de forma transparente aos usuários e partes interessadas relevantes.',
+        ]
+      },
+      {
+        id: '24028_avaliacao', title: 'Avaliação de Confiabilidade de Sistemas de IA', desc: 'Metodologias para avaliar a confiabilidade dos sistemas de IA',
+        questions: [
+          'Avaliações de confiabilidade são realizadas para todos os sistemas de IA antes da implantação e periodicamente em produção.',
+          'Metodologias de avaliação de confiabilidade são documentadas e aplicadas de forma consistente entre sistemas similares.',
+          'Resultados das avaliações de confiabilidade são documentados e utilizados para orientar decisões de implantação e melhoria.',
+          'Avaliações independentes de confiabilidade de sistemas de IA críticos são realizadas por equipes ou auditores externos.',
+        ]
+      },
+      {
+        id: '24028_melhoria', title: 'Melhoria da Confiabilidade de Sistemas de IA', desc: 'Estratégias para aumentar a confiabilidade dos sistemas de IA',
+        questions: [
+          'Planos de melhoria da confiabilidade são elaborados para sistemas que não atingem os requisitos definidos.',
+          'A organização investe em técnicas de IA explicável (XAI) para aumentar a transparência dos sistemas de IA relevantes.',
+          'Mecanismos de feedback de usuários sobre confiabilidade são coletados e analisados para orientar melhorias.',
+          'A evolução das melhores práticas de confiabilidade em IA é monitorada e incorporada continuamente.',
+        ]
+      },
+      {
+        id: '24028_comunicacao', title: 'Comunicação e Documentação de Confiabilidade', desc: 'Transparência e comunicação sobre confiabilidade dos sistemas de IA',
+        questions: [
+          'Documentação de confiabilidade de sistemas de IA inclui escopo, limitações, desempenho e condições de operação segura.',
+          'Informações sobre confiabilidade são comunicadas adequadamente a diferentes audiências: usuários, gestores, reguladores.',
+          'A organização publica ou disponibiliza internamente relatórios de confiabilidade para sistemas de IA relevantes.',
+          'Atualizações em sistemas de IA que afetem a confiabilidade são comunicadas proativamente às partes interessadas.',
+        ]
+      },
+    ]
+  },
+  iso25059: {
+    label: 'ISO/IEC 25059',
+    subtitle: 'Qualidade de Sistemas de IA (SQuaRE)',
+    color: '#6d28d9',
+    group: 'tecnologia',
+    sections: [
+      {
+        id: '25059_modelo', title: 'Modelo de Qualidade para Sistemas de IA', desc: 'Framework de qualidade específico para sistemas baseados em IA',
+        questions: [
+          'A organização adotou o modelo de qualidade da ISO/IEC 25059 para avaliar seus sistemas de IA.',
+          'As características de qualidade específicas de IA (adaptabilidade, autonomia, correção, confiabilidade de ML) estão definidas e avaliadas.',
+          'O modelo de qualidade de IA é integrado ao processo de desenvolvimento e validação de sistemas de IA da organização.',
+          'Métricas de qualidade específicas de IA estão definidas e são medidas ao longo do ciclo de vida dos sistemas.',
+        ]
+      },
+      {
+        id: '25059_avaliacao', title: 'Avaliação de Qualidade de Sistemas de IA', desc: 'Processos de medição e avaliação da qualidade de sistemas de IA',
+        questions: [
+          'Processos formais de avaliação de qualidade de sistemas de IA baseados na ISO/IEC 25059 estão implementados.',
+          'Avaliações de qualidade cobrem comportamento em operação normal, condições adversas e cenários de borda.',
+          'Resultados das avaliações de qualidade são documentados e utilizados para decisões de implantação e melhoria.',
+          'A qualidade dos sistemas de IA é monitorada continuamente em produção com métricas e alertas configurados.',
+        ]
+      },
+      {
+        id: '25059_requisitos', title: 'Requisitos de Qualidade para IA', desc: 'Definição e gestão de requisitos de qualidade específicos de IA',
+        questions: [
+          'Requisitos de qualidade específicos de IA são elicitados considerando características únicas como aprendizado e adaptabilidade.',
+          'Trade-offs entre características de qualidade de IA são avaliados e documentados nas decisões de design.',
+          'Requisitos de qualidade de IA são rastreáveis desde a especificação até os testes e resultados de produção.',
+          'A conformidade com requisitos de qualidade de IA é verificada antes de cada implantação ou atualização significativa.',
+        ]
+      },
+      {
+        id: '25059_melhoria', title: 'Melhoria Contínua da Qualidade de IA', desc: 'Processos de melhoria baseados em avaliações de qualidade',
+        questions: [
+          'Lições aprendidas de avaliações de qualidade de IA são sistematicamente incorporadas aos processos de desenvolvimento.',
+          'Planos de melhoria de qualidade são elaborados para sistemas que não atingem os requisitos estabelecidos.',
+          'A organização monitora avanços na área de qualidade de IA e atualiza seus processos conforme novas práticas emergem.',
+          'A maturidade dos processos de qualidade de IA é avaliada periodicamente com plano de evolução documentado.',
+        ]
+      },
+    ]
+  },
+  iso5259: {
+    label: 'ISO/IEC 5259',
+    subtitle: 'Qualidade de Dados para ML',
+    color: '#6d28d9',
+    group: 'tecnologia',
+    sections: [
+      {
+        id: '5259_qualidade', title: 'Qualidade de Dados para Analytics e ML', desc: 'Framework de qualidade de dados para aprendizado de máquina',
+        questions: [
+          'A organização adota a série ISO/IEC 5259 como referência para gestão da qualidade de dados usados em ML.',
+          'Dimensões de qualidade de dados para ML (precisão, completude, consistência, relevância, representatividade) estão definidas.',
+          'Processos de avaliação da qualidade dos dados de treinamento, validação e teste são executados sistematicamente.',
+          'Métricas de qualidade de dados são coletadas e monitoradas ao longo do ciclo de vida dos modelos de ML.',
+        ]
+      },
+      {
+        id: '5259_gestao', title: 'Gestão de Qualidade de Dados para ML', desc: 'Processos organizacionais para assegurar qualidade dos dados de IA',
+        questions: [
+          'Responsabilidades pela qualidade dos dados utilizados em sistemas de ML estão atribuídas e formalizadas.',
+          'Processos de limpeza, transformação e validação de dados para ML são documentados e executados consistentemente.',
+          'Impacto de problemas de qualidade de dados sobre o desempenho e equidade dos modelos de ML é avaliado.',
+          'Políticas de governança de dados aplicam requisitos específicos para dados utilizados em treinamento de modelos de IA.',
+        ]
+      },
+      {
+        id: '5259_monitoramento', title: 'Monitoramento de Qualidade de Dados em Produção', desc: 'Vigilância contínua da qualidade dos dados em sistemas de ML em produção',
+        questions: [
+          'Monitoramento contínuo da qualidade dos dados de entrada para modelos de ML em produção está implementado.',
+          'Alertas são configurados para detectar degradação de qualidade de dados que possa afetar o desempenho dos modelos.',
+          'Desvios de distribuição (data drift e concept drift) são detectados e tratados formalmente.',
+          'Relatórios de qualidade de dados para ML são produzidos regularmente e apresentados às equipes responsáveis.',
+        ]
+      },
+      {
+        id: '5259_melhoria', title: 'Melhoria Contínua da Qualidade de Dados de IA', desc: 'Evolução dos processos de qualidade de dados para ML',
+        questions: [
+          'Lições aprendidas de problemas de qualidade de dados são incorporadas aos processos de coleta e preparação de dados.',
+          'A organização investe em ferramentas e automação para melhoria da qualidade de dados para ML.',
+          'Benchmarks e padrões de qualidade de dados para ML são revisados periodicamente e atualizados.',
+          'A maturidade dos processos de qualidade de dados para IA é avaliada e um plano de evolução está documentado.',
+        ]
+      },
+    ]
+  },
+  iso5339: {
+    label: 'ISO/IEC 5339',
+    subtitle: 'Diretrizes para Aplicações de IA',
+    color: '#6d28d9',
+    group: 'tecnologia',
+    sections: [
+      {
+        id: '5339_aplicacoes', title: 'Planejamento e Seleção de Aplicações de IA', desc: 'Diretrizes para identificar e priorizar aplicações de IA',
+        questions: [
+          'A organização utiliza as diretrizes da ISO/IEC 5339 para identificar, avaliar e priorizar aplicações de IA.',
+          'Critérios de seleção de aplicações de IA consideram viabilidade técnica, valor de negócio, riscos e conformidade.',
+          'O portfólio de aplicações de IA é gerenciado de forma estruturada com revisões periódicas de prioridade e status.',
+          'Casos de uso de IA são documentados com objetivos, requisitos, métricas de sucesso e critérios de aceitação definidos.',
+        ]
+      },
+      {
+        id: '5339_desenvolvimento', title: 'Desenvolvimento Responsável de Aplicações de IA', desc: 'Boas práticas para desenvolvimento de aplicações de IA',
+        questions: [
+          'Princípios de IA responsável (transparência, equidade, responsabilização, privacidade) são incorporados no desenvolvimento.',
+          'Avaliações de impacto são realizadas para aplicações de IA que afetam pessoas ou processos críticos.',
+          'Documentação das aplicações de IA inclui decisões de design, limitações, riscos e medidas de mitigação.',
+          'Revisões de qualidade e conformidade de aplicações de IA são realizadas em marcos definidos do desenvolvimento.',
+        ]
+      },
+      {
+        id: '5339_implantacao', title: 'Implantação e Gestão de Aplicações de IA', desc: 'Processos para implantação e operação de aplicações de IA',
+        questions: [
+          'Processos formais de aprovação e implantação de aplicações de IA incluem revisão de riscos e conformidade.',
+          'Planos de operação de aplicações de IA definem monitoramento, suporte, retreinamento e gestão de incidentes.',
+          'A organização gerencia dependências e impactos de aplicações de IA sobre processos e sistemas existentes.',
+          'Planos de contingência e rollback para aplicações de IA críticas estão documentados e testados.',
+        ]
+      },
+      {
+        id: '5339_evolucao', title: 'Evolução e Descontinuação de Aplicações de IA', desc: 'Gestão do ciclo de vida e aposentadoria de aplicações de IA',
+        questions: [
+          'Processo de atualização de aplicações de IA inclui avaliação de impacto, testes e aprovação antes da implantação.',
+          'Critérios para descontinuação de aplicações de IA estão definidos e o processo de retirada é gerenciado formalmente.',
+          'O impacto da descontinuação de aplicações de IA sobre usuários e processos é avaliado e comunicado adequadamente.',
+          'A organização mantém registro histórico de aplicações de IA desenvolvidas, implantadas e descontinuadas.',
+        ]
+      },
+    ]
+  },
   coso: {
     label: 'COSO',
     subtitle: 'Controles Internos / ERM',
@@ -2911,7 +3352,7 @@ function enviarEmailPremium() {
   btn.disabled = true;
   btn.innerHTML = '<span class="prem-spinner"></span>Enviando...';
 
-  const corpo = `Nome: ${nome}\nFramework de interesse: ${fw}\n\nMensagem:\n${assunto}\n\n---\nEnviado via GRC Maturity Assessment v10.2`;
+  const corpo = `Nome: ${nome}\nFramework de interesse: ${fw}\n\nMensagem:\n${assunto}\n\n---\nEnviado via GRC Maturity Assessment v32.0`;
 
   fetch('https://formsubmit.co/ajax/williamevaristo.juridico@gmail.com', {
     method: 'POST',
@@ -3092,7 +3533,7 @@ function renderFwSelector() {
     iso22:         '📋 ISO 22300 — Segurança e Resiliência Organizacional',
     iso27:         '🔐 ISO/IEC 27000 — Segurança da Informação e Privacidade',
     riscos:        '⚠️ ISO 31000 — Gestão de Riscos',
-    tecnologia:    '🤖 ISO/IEC 42001 — Inteligência Artificial',
+    tecnologia:    '🤖 ISO/IEC SC 42 — Inteligência Artificial',
     governanca:    '🏛️ Governança Corporativa e Organizacional',
     ciberseguranca:'🛡️ Cibersegurança',
     privacidade:   '🔏 Privacidade e Dados',
@@ -3529,6 +3970,66 @@ function getRec(score, fw, secId) {
       direitos:         'Implemente processo formal e canal dedicado para atendimento ágil às solicitações dos titulares.',
       encarregado:      'Designe o DPO formalmente, atualize políticas de privacidade e elabore RIPDs para tratamentos de alto risco.',
       incidentes_lgpd:  'Estruture processo de detecção e notificação de incidentes à ANPD e realize treinamentos regulares de privacidade.',
+    },
+    iso22989: {
+      '22989_conceitos':   'Adote a terminologia da ISO/IEC 22989 em todos os documentos de IA e treine equipes nos conceitos fundamentais.',
+      '22989_taxonomia':   'Classifique todos os sistemas de IA da organização segundo a taxonomia da norma e mantenha inventário atualizado.',
+      '22989_escopo':      'Documente escopo, limites e condições de operação segura de cada sistema de IA de forma clara e acessível.',
+      '22989_melhoria':    'Monitore atualizações da ISO/IEC 22989 e alinhe periodicamente a documentação interna à terminologia vigente.',
+    },
+    iso23053: {
+      '23053_framework':   'Adote o framework da ISO/IEC 23053 para estruturar sistemas de ML com componentes e interfaces documentados.',
+      '23053_dados':       'Implemente processos formais de qualidade, rastreabilidade e governança de dados para treinamento de modelos de ML.',
+      '23053_modelos':     'Formalize desenvolvimento de modelos com critérios de aceitação, versionamento e testes de robustez e viés.',
+      '23053_operacao':    'Implemente monitoramento contínuo de modelos em produção com alertas para degradação e processo de retreinamento.',
+    },
+    iso23894: {
+      '23894_contexto':    'Adote a ISO/IEC 23894 como referência para gestão de riscos de IA, integrando ao framework corporativo de GRC.',
+      '23894_avaliacao':   'Realize avaliações de risco de IA cobrindo viés, opacidade, falha e impactos sobre direitos fundamentais.',
+      '23894_tratamento':  'Elabore planos de tratamento com controles de explicabilidade e supervisão humana para sistemas de maior risco.',
+      '23894_monitoramento': 'Defina KRIs de risco de IA, monitore-os continuamente e reporte à alta direção com regularidade.',
+    },
+    iso5338: {
+      '5338_processos':    'Formalize os processos do ciclo de vida de IA conforme ISO/IEC 5338, integrando à engenharia de software.',
+      '5338_requisitos':   'Implemente gestão de requisitos com rastreabilidade e critérios de qualidade ao longo do ciclo de vida de IA.',
+      '5338_verificacao':  'Execute planos de verificação e validação com testes de robustez e conformidade ética antes de cada implantação.',
+      '5338_retirada':     'Gerencie formalmente operação, manutenção e descontinuação de sistemas de IA com políticas de retenção de dados.',
+    },
+    iso5469: {
+      '5469_seguranca':    'Avalie requisitos de segurança funcional para sistemas de IA críticos e mantenha conformidade com normas setoriais.',
+      '5469_confiabilidade': 'Defina requisitos de confiabilidade, realize testes adversariais e implemente fail-safe em sistemas críticos de IA.',
+      '5469_supervisao':   'Defina níveis de autonomia, implemente interfaces de supervisão humana e treine operadores de sistemas de IA críticos.',
+      '5469_auditoria':    'Realize auditorias de segurança funcional de IA periodicamente e trate não-conformidades com urgência.',
+    },
+    iso24027: {
+      '24027_identificacao': 'Adote o referencial da ISO/IEC TR 24027 para identificar e classificar vieses em todos os sistemas de IA.',
+      '24027_medicao':      'Defina e aplique métricas de equidade e avalie viés em dados, modelos e resultados de inferência regularmente.',
+      '24027_mitigacao':    'Implemente estratégias de mitigação de viés proporcionais ao risco e monitore sua eficácia continuamente.',
+      '24027_governanca':   'Atribua responsabilidades de equidade em IA, documente políticas e trate casos de viés como incidentes formais.',
+    },
+    iso24028: {
+      '24028_fundamentos':  'Adote o framework da ISO/IEC TR 24028 e avalie as dimensões de confiabilidade para cada sistema de IA.',
+      '24028_avaliacao':    'Realize avaliações de confiabilidade antes de cada implantação e periodicamente em sistemas de IA em produção.',
+      '24028_melhoria':     'Elabore planos de melhoria de confiabilidade e invista em IA explicável para sistemas de maior relevância.',
+      '24028_comunicacao':  'Documente e comunique a confiabilidade dos sistemas de IA de forma adequada a diferentes audiências.',
+    },
+    iso25059: {
+      '25059_modelo':       'Adote o modelo de qualidade da ISO/IEC 25059 e defina métricas específicas de qualidade para sistemas de IA.',
+      '25059_avaliacao':    'Implemente avaliações formais de qualidade cobrindo comportamento normal, adverso e cenários de borda.',
+      '25059_requisitos':   'Elicite requisitos de qualidade específicos de IA com rastreabilidade e avalie trade-offs de forma documentada.',
+      '25059_melhoria':     'Incorpore lições aprendidas de avaliações de qualidade e avalie periodicamente a maturidade dos processos.',
+    },
+    iso5259: {
+      '5259_qualidade':     'Adote a série ISO/IEC 5259 e defina dimensões e métricas de qualidade de dados para todos os sistemas de ML.',
+      '5259_gestao':        'Implemente processos de limpeza, validação e governança de dados com responsáveis formalmente designados.',
+      '5259_monitoramento': 'Monitore continuamente a qualidade dos dados em produção com alertas para data drift e concept drift.',
+      '5259_melhoria':      'Incorpore lições aprendidas de problemas de dados e evolua os processos de qualidade de dados para IA.',
+    },
+    iso5339: {
+      '5339_aplicacoes':    'Use as diretrizes da ISO/IEC 5339 para identificar, avaliar e priorizar aplicações de IA com critérios estruturados.',
+      '5339_desenvolvimento': 'Incorpore princípios de IA responsável no desenvolvimento e realize avaliações de impacto para aplicações críticas.',
+      '5339_implantacao':   'Formalize aprovação, operação e contingência para implantação de aplicações de IA com revisão de riscos.',
+      '5339_evolucao':      'Gerencie atualizações e descontinuação de aplicações de IA com avaliação de impacto e comunicação adequada.',
     },
     iso42001: {
       ai_contexto:      'Defina o escopo do SGAI, aprove política de IA responsável e estabeleça papéis e responsabilidades formais.',
@@ -3969,6 +4470,226 @@ const AP_ACTIONS = {
       { action: 'Implementar monitoramento contínuo de rede e endpoints com alertas automatizados para anomalias.', effort: '8–14 sem', resp: 'SOC / TI' },
       { action: 'Estabelecer programa periódico de testes de penetração e avaliações de vulnerabilidades com remediação rastreada.', effort: '6–12 sem', resp: 'CISO / Consultoria' },
       { action: 'Estruturar programa de conscientização em segurança com treinamentos, phishing simulado e métricas de eficácia.', effort: '4–8 sem', resp: 'CISO / RH' },
+    ],
+  },
+  iso22989: {
+    '22989_conceitos': [
+      { action: 'Adotar a terminologia da ISO/IEC 22989 em políticas, documentos e contratos de IA da organização.', effort: '3–5 sem', resp: 'IA / GRC / Jurídico' },
+      { action: 'Treinar equipes de IA nos conceitos fundamentais e terminologia padronizada da ISO/IEC 22989.', effort: '3–5 sem', resp: 'RH / IA / GRC' },
+      { action: 'Elaborar e manter glossário interno de IA alinhado à terminologia internacional vigente.', effort: '2–4 sem', resp: 'IA / Comunicação' },
+    ],
+    '22989_taxonomia': [
+      { action: 'Classificar todos os sistemas de IA segundo a taxonomia da ISO/IEC 22989 e manter inventário atualizado.', effort: '4–6 sem', resp: 'IA / GRC / TI' },
+      { action: 'Implementar processo de registro e classificação de novos sistemas de IA antes da implantação.', effort: '2–4 sem', resp: 'IA / GRC' },
+      { action: 'Revisar e atualizar a taxonomia de IA adotada conforme evolução da norma e do campo.', effort: 'Anual', resp: 'IA / GRC' },
+    ],
+    '22989_escopo': [
+      { action: 'Documentar escopo operacional, limites e condições de operação segura de cada sistema de IA.', effort: '4–8 sem', resp: 'IA / GRC / Engenharia' },
+      { action: 'Comunicar capacidades e limitações dos sistemas de IA de forma transparente a usuários e stakeholders.', effort: '3–5 sem', resp: 'IA / Comunicação / GRC' },
+      { action: 'Documentar premissas e restrições de uso de cada sistema de IA em produção de forma acessível.', effort: '3–5 sem', resp: 'IA / GRC' },
+    ],
+    '22989_melhoria': [
+      { action: 'Monitorar atualizações da ISO/IEC 22989 e atualizar documentação interna de IA conforme necessário.', effort: 'Anual', resp: 'IA / GRC / Qualidade' },
+      { action: 'Verificar periodicamente a consistência da terminologia de IA em todos os documentos e comunicações.', effort: 'Semestral', resp: 'IA / GRC / Comunicação' },
+      { action: 'Manter programa de treinamento contínuo sobre terminologia e conceitos de IA para equipes relevantes.', effort: 'Anual', resp: 'RH / IA' },
+    ],
+  },
+  iso23053: {
+    '23053_framework': [
+      { action: 'Adotar o framework da ISO/IEC 23053 para estruturar sistemas de ML com componentes e interfaces documentados.', effort: '4–8 sem', resp: 'IA / Engenharia / GRC' },
+      { action: 'Documentar os componentes do framework (dados, modelo, inferência, feedback) para cada sistema de ML.', effort: '4–6 sem', resp: 'IA / Engenharia' },
+      { action: 'Integrar o framework de ML ao ciclo de vida de desenvolvimento de software da organização.', effort: '6–10 sem', resp: 'IA / Engenharia / TI' },
+    ],
+    '23053_dados': [
+      { action: 'Implementar processos formais de coleta, preparação, validação e rastreabilidade de dados para ML.', effort: '6–10 sem', resp: 'IA / Dados / Engenharia' },
+      { action: 'Avaliar sistematicamente a qualidade dos dados de treinamento quanto a completude, representatividade e viés.', effort: '4–8 sem', resp: 'IA / Dados / GRC' },
+      { action: 'Estabelecer políticas de retenção, atualização e descarte de conjuntos de dados de ML.', effort: '3–5 sem', resp: 'IA / Jurídico / GRC' },
+    ],
+    '23053_modelos': [
+      { action: 'Formalizar processo de desenvolvimento de modelos com critérios de aceitação e aprovação para produção.', effort: '4–8 sem', resp: 'IA / Engenharia / GRC' },
+      { action: 'Implementar versionamento de modelos com rastreabilidade de alterações e possibilidade de rollback.', effort: '4–6 sem', resp: 'IA / TI / Engenharia' },
+      { action: 'Realizar testes de robustez, viés e comportamento adversarial em todos os modelos antes da implantação.', effort: '4–8 sem', resp: 'IA / Segurança / GRC' },
+    ],
+    '23053_operacao': [
+      { action: 'Implementar monitoramento contínuo de desempenho e comportamento de modelos de ML em produção.', effort: '4–8 sem', resp: 'IA / TI / Operações' },
+      { action: 'Configurar alertas para degradação, desvios de distribuição e anomalias nos modelos de ML.', effort: '3–6 sem', resp: 'IA / TI' },
+      { action: 'Formalizar processo de retreinamento e atualização de modelos com critérios e periodicidade definidos.', effort: '3–5 sem', resp: 'IA / Engenharia / GRC' },
+    ],
+  },
+  iso23894: {
+    '23894_contexto': [
+      { action: 'Adotar a ISO/IEC 23894 como referência de gestão de riscos de IA integrada ao framework corporativo de GRC.', effort: '3–5 sem', resp: 'IA / GRC / Alta Direção' },
+      { action: 'Estabelecer critérios de risco de IA (tolerância, apetite, aceitação) com aprovação da liderança.', effort: '3–5 sem', resp: 'Alta Direção / IA / GRC' },
+      { action: 'Integrar o processo de gestão de riscos de IA ao SGAI e ao framework de risco corporativo.', effort: '4–6 sem', resp: 'IA / GRC / Riscos' },
+    ],
+    '23894_avaliacao': [
+      { action: 'Realizar avaliações de risco de IA cobrindo viés, opacidade, falha, uso indevido e impacto social para cada sistema.', effort: '6–10 sem', resp: 'IA / GRC / Riscos' },
+      { action: 'Avaliar riscos de IA emergentes (generativa, deepfakes, ataques adversariais) periodicamente.', effort: 'Semestral', resp: 'IA / GRC / Segurança' },
+      { action: 'Documentar, revisar e atualizar avaliações de risco de IA conforme evolução dos sistemas e do contexto.', effort: 'Semestral', resp: 'IA / GRC' },
+    ],
+    '23894_tratamento': [
+      { action: 'Elaborar planos de tratamento de riscos de IA com controles técnicos e organizacionais proporcionais ao risco.', effort: '4–8 sem', resp: 'IA / GRC / Engenharia' },
+      { action: 'Implementar controles de mitigação de viés, explicabilidade e supervisão humana nos sistemas de maior risco.', effort: '6–12 sem', resp: 'IA / Engenharia / GRC' },
+      { action: 'Formalizar processo de aceitação de riscos residuais de IA por gestores autorizados com documentação.', effort: '2–4 sem', resp: 'Alta Direção / IA / GRC' },
+    ],
+    '23894_monitoramento': [
+      { action: 'Definir KRIs específicos para riscos de IA e monitorar continuamente com reportes periódicos à liderança.', effort: '3–5 sem', resp: 'IA / GRC / Alta Direção' },
+      { action: 'Produzir relatórios regulares de riscos de IA para alta direção e órgão de governança.', effort: 'Trimestral', resp: 'IA / GRC' },
+      { action: 'Incorporar lições aprendidas de incidentes de IA ao processo de gestão de riscos para melhoria contínua.', effort: 'Pós-evento', resp: 'IA / GRC / Alta Direção' },
+    ],
+  },
+  iso5338: {
+    '5338_processos': [
+      { action: 'Definir e implementar os processos do ciclo de vida de sistemas de IA conforme a ISO/IEC 5338.', effort: '6–10 sem', resp: 'IA / Engenharia / GRC' },
+      { action: 'Integrar os processos do ciclo de vida de IA ao desenvolvimento de software e gestão de projetos existentes.', effort: '4–8 sem', resp: 'IA / TI / PMO' },
+      { action: 'Designar responsáveis por cada processo do ciclo de vida de IA com autoridades e recursos definidos.', effort: '2–4 sem', resp: 'IA / RH / GRC' },
+    ],
+    '5338_requisitos': [
+      { action: 'Implementar gestão de requisitos de IA com rastreabilidade entre especificação, design, implementação e testes.', effort: '4–8 sem', resp: 'IA / Engenharia / Qualidade' },
+      { action: 'Definir critérios de qualidade específicos de IA verificados ao longo do ciclo de vida dos sistemas.', effort: '3–5 sem', resp: 'IA / Qualidade / GRC' },
+      { action: 'Implementar processo de gestão de mudanças para sistemas de IA com avaliação de impacto antes de alterações.', effort: '3–6 sem', resp: 'IA / TI / Engenharia' },
+    ],
+    '5338_verificacao': [
+      { action: 'Elaborar e executar planos de verificação e validação específicos para sistemas de IA antes de cada implantação.', effort: '4–8 sem', resp: 'IA / Qualidade / GRC' },
+      { action: 'Incluir testes de robustez, viés, segurança e comportamento adversarial nos planos de validação de IA.', effort: '4–8 sem', resp: 'IA / Segurança / Engenharia' },
+      { action: 'Formalizar aprovação dos resultados de verificação como condição para entrada em produção de sistemas de IA.', effort: '2–4 sem', resp: 'IA / GRC / Alta Direção' },
+    ],
+    '5338_retirada': [
+      { action: 'Elaborar planos de operação e manutenção incluindo monitoramento, retreinamento e gestão de versões de IA.', effort: '3–6 sem', resp: 'IA / TI / Operações' },
+      { action: 'Definir critérios de descontinuação e implementar processo formal de retirada de sistemas de IA.', effort: '3–5 sem', resp: 'IA / GRC / Jurídico' },
+      { action: 'Estabelecer políticas de retenção ou descarte de dados, modelos e documentação de sistemas de IA descontinuados.', effort: '3–5 sem', resp: 'IA / Jurídico / TI' },
+    ],
+  },
+  iso5469: {
+    '5469_seguranca': [
+      { action: 'Avaliar requisitos de segurança funcional para sistemas de IA em aplicações críticas com documentação formal.', effort: '4–8 sem', resp: 'IA / Segurança / Engenharia' },
+      { action: 'Garantir conformidade com normas setoriais de segurança funcional que interagem com IA (IEC 61508, ISO 26262).', effort: '6–12 sem', resp: 'Engenharia / GRC / Jurídico' },
+      { action: 'Submeter sistemas de IA em aplicações com impacto em segurança funcional a processos de certificação adequados.', effort: '8–16 sem', resp: 'Engenharia / GRC / Qualidade' },
+    ],
+    '5469_confiabilidade': [
+      { action: 'Definir requisitos de confiabilidade e realizar testes adversariais para sistemas de IA em contextos críticos.', effort: '4–8 sem', resp: 'IA / Engenharia / GRC' },
+      { action: 'Implementar mecanismos de detecção de falha e modos de operação segura (fail-safe) em sistemas de IA críticos.', effort: '6–12 sem', resp: 'Engenharia / Segurança / IA' },
+      { action: 'Documentar e validar o comportamento do sistema de IA em situações de degradação ou falha parcial.', effort: '4–6 sem', resp: 'IA / Engenharia / Qualidade' },
+    ],
+    '5469_supervisao': [
+      { action: 'Definir níveis de autonomia dos sistemas de IA e implementar supervisão humana adequada para cada nível.', effort: '4–8 sem', resp: 'IA / GRC / Operações' },
+      { action: 'Desenvolver interfaces de supervisão que permitam monitoramento, intervenção e override pelos operadores.', effort: '4–8 sem', resp: 'IA / TI / Engenharia' },
+      { action: 'Treinar operadores de sistemas de IA críticos em supervisão, limites do sistema e procedimentos de intervenção.', effort: '4–6 sem', resp: 'RH / IA / Segurança' },
+    ],
+    '5469_auditoria': [
+      { action: 'Realizar auditorias de segurança funcional cobrindo sistemas de IA periodicamente com equipes competentes.', effort: 'Anual', resp: 'Auditoria / IA / GRC' },
+      { action: 'Tratar não-conformidades de segurança em sistemas de IA com urgência e ações corretivas documentadas.', effort: 'Pós-auditoria', resp: 'IA / GRC / Engenharia' },
+      { action: 'Monitorar atualizações regulatórias sobre segurança funcional de IA e adaptar sistemas conforme necessário.', effort: 'Contínuo', resp: 'IA / Jurídico / GRC' },
+    ],
+  },
+  iso24027: {
+    '24027_identificacao': [
+      { action: 'Adotar o referencial da ISO/IEC TR 24027 e mapear fontes de viés no ciclo de vida de todos os sistemas de IA.', effort: '4–8 sem', resp: 'IA / GRC / Ética' },
+      { action: 'Treinar equipes de IA sobre tipos de viés, suas causas e implicações éticas e legais.', effort: '3–6 sem', resp: 'RH / IA / GRC' },
+      { action: 'Incluir avaliação de viés como requisito obrigatório no processo de desenvolvimento de sistemas de IA.', effort: '2–4 sem', resp: 'IA / GRC / Engenharia' },
+    ],
+    '24027_medicao': [
+      { action: 'Definir e aplicar métricas de equidade e medição de viés para todos os sistemas de IA que afetam pessoas.', effort: '4–8 sem', resp: 'IA / Dados / GRC' },
+      { action: 'Realizar avaliações de viés em dados de treinamento, modelos e resultados de inferência regularmente.', effort: 'Semestral', resp: 'IA / Dados / Qualidade' },
+      { action: 'Documentar resultados de avaliações de viés e reportar à gestão quando os limiares são superados.', effort: 'Trimestral', resp: 'IA / GRC / Alta Direção' },
+    ],
+    '24027_mitigacao': [
+      { action: 'Implementar estratégias de mitigação de viés nas fases de dados, modelagem e pós-processamento conforme o risco.', effort: '6–10 sem', resp: 'IA / Engenharia / Dados' },
+      { action: 'Avaliar e documentar a eficácia das medidas de mitigação de viés com evidências objetivas.', effort: '4–6 sem', resp: 'IA / GRC / Qualidade' },
+      { action: 'Implementar monitoramento contínuo de viés em sistemas de IA em produção com alertas configurados.', effort: '4–6 sem', resp: 'IA / TI / GRC' },
+    ],
+    '24027_governanca': [
+      { action: 'Atribuir responsabilidades formais para gestão de viés e equidade em IA a papéis específicos.', effort: '2–4 sem', resp: 'Alta Direção / IA / GRC' },
+      { action: 'Documentar e comunicar políticas de equidade em IA a todas as equipes de desenvolvimento.', effort: '2–4 sem', resp: 'IA / GRC / Comunicação' },
+      { action: 'Tratar casos de viés identificado como incidentes formais com investigação e ação corretiva documentadas.', effort: 'Pós-evento', resp: 'IA / GRC / Ética' },
+    ],
+  },
+  iso24028: {
+    '24028_fundamentos': [
+      { action: 'Adotar o framework da ISO/IEC TR 24028 e avaliar as dimensões de confiabilidade para cada sistema de IA.', effort: '4–8 sem', resp: 'IA / GRC / Engenharia' },
+      { action: 'Definir requisitos de confiabilidade para cada sistema de IA com base em contexto de uso e risco.', effort: '3–5 sem', resp: 'IA / GRC / Alta Direção' },
+      { action: 'Comunicar a confiabilidade dos sistemas de IA de forma transparente a usuários e partes interessadas.', effort: '3–5 sem', resp: 'IA / Comunicação / GRC' },
+    ],
+    '24028_avaliacao': [
+      { action: 'Realizar avaliações de confiabilidade para todos os sistemas de IA antes da implantação e periodicamente.', effort: '4–8 sem', resp: 'IA / Qualidade / GRC' },
+      { action: 'Documentar e utilizar resultados das avaliações de confiabilidade para decisões de implantação e melhoria.', effort: '3–5 sem', resp: 'IA / GRC / Engenharia' },
+      { action: 'Realizar avaliações independentes de confiabilidade para sistemas de IA críticos.', effort: 'Anual', resp: 'Auditoria / IA / GRC' },
+    ],
+    '24028_melhoria': [
+      { action: 'Elaborar planos de melhoria da confiabilidade para sistemas que não atingem os requisitos definidos.', effort: '4–8 sem', resp: 'IA / Engenharia / GRC' },
+      { action: 'Investir em técnicas de IA explicável (XAI) para aumentar a transparência dos sistemas de IA relevantes.', effort: '6–12 sem', resp: 'IA / Engenharia / P&D' },
+      { action: 'Coletar e analisar feedback de usuários sobre confiabilidade para orientar melhorias contínuas.', effort: 'Contínuo', resp: 'IA / Produto / GRC' },
+    ],
+    '24028_comunicacao': [
+      { action: 'Produzir documentação de confiabilidade de sistemas de IA com escopo, limitações e condições de operação.', effort: '3–6 sem', resp: 'IA / Comunicação / GRC' },
+      { action: 'Comunicar atualizações em sistemas de IA que afetem a confiabilidade proativamente às partes interessadas.', effort: 'Pós-atualização', resp: 'IA / Comunicação / GRC' },
+      { action: 'Disponibilizar relatórios de confiabilidade de sistemas de IA relevantes interna e externamente.', effort: 'Semestral', resp: 'IA / GRC / Alta Direção' },
+    ],
+  },
+  iso25059: {
+    '25059_modelo': [
+      { action: 'Adotar o modelo de qualidade da ISO/IEC 25059 e definir métricas específicas de qualidade para sistemas de IA.', effort: '4–6 sem', resp: 'IA / Qualidade / GRC' },
+      { action: 'Integrar as características de qualidade de IA ao processo de desenvolvimento e validação de sistemas.', effort: '4–8 sem', resp: 'IA / Engenharia / Qualidade' },
+      { action: 'Medir e monitorar as métricas de qualidade de IA ao longo do ciclo de vida dos sistemas.', effort: '4–6 sem', resp: 'IA / Qualidade / TI' },
+    ],
+    '25059_avaliacao': [
+      { action: 'Implementar avaliações formais de qualidade de IA cobrindo comportamento normal, adverso e cenários de borda.', effort: '4–8 sem', resp: 'IA / Qualidade / Engenharia' },
+      { action: 'Documentar resultados das avaliações de qualidade e utilizá-los para decisões de implantação.', effort: '3–5 sem', resp: 'IA / GRC / Qualidade' },
+      { action: 'Monitorar continuamente a qualidade dos sistemas de IA em produção com métricas e alertas configurados.', effort: '4–6 sem', resp: 'IA / TI / Qualidade' },
+    ],
+    '25059_requisitos': [
+      { action: 'Elicitar requisitos de qualidade específicos de IA considerando características como adaptabilidade e autonomia.', effort: '3–6 sem', resp: 'IA / Engenharia / Qualidade' },
+      { action: 'Avaliar e documentar trade-offs entre características de qualidade nas decisões de design de sistemas de IA.', effort: '3–5 sem', resp: 'IA / Engenharia / GRC' },
+      { action: 'Garantir rastreabilidade de requisitos de qualidade de IA desde a especificação até os resultados de produção.', effort: '4–6 sem', resp: 'IA / Qualidade / Engenharia' },
+    ],
+    '25059_melhoria': [
+      { action: 'Incorporar lições aprendidas de avaliações de qualidade de IA nos processos de desenvolvimento.', effort: 'Contínuo', resp: 'IA / Qualidade / Engenharia' },
+      { action: 'Elaborar planos de melhoria de qualidade para sistemas de IA que não atingem os requisitos estabelecidos.', effort: '4–6 sem', resp: 'IA / GRC / Engenharia' },
+      { action: 'Avaliar periodicamente a maturidade dos processos de qualidade de IA com plano de evolução documentado.', effort: 'Anual', resp: 'IA / GRC / Qualidade' },
+    ],
+  },
+  iso5259: {
+    '5259_qualidade': [
+      { action: 'Adotar a série ISO/IEC 5259 e definir dimensões e métricas de qualidade de dados para todos os sistemas de ML.', effort: '3–6 sem', resp: 'IA / Dados / GRC' },
+      { action: 'Implementar avaliações sistemáticas da qualidade dos dados de treinamento, validação e teste.', effort: '4–8 sem', resp: 'IA / Dados / Engenharia' },
+      { action: 'Coletar e monitorar métricas de qualidade de dados ao longo do ciclo de vida dos modelos de ML.', effort: '4–6 sem', resp: 'IA / Dados / TI' },
+    ],
+    '5259_gestao': [
+      { action: 'Atribuir responsabilidades pela qualidade de dados de ML e formalizar processos de limpeza e validação.', effort: '3–5 sem', resp: 'IA / Dados / GRC' },
+      { action: 'Aplicar políticas de governança de dados com requisitos específicos para dados de treinamento de IA.', effort: '4–6 sem', resp: 'IA / Dados / Jurídico' },
+      { action: 'Avaliar o impacto de problemas de qualidade de dados sobre desempenho e equidade dos modelos de ML.', effort: '3–5 sem', resp: 'IA / Dados / GRC' },
+    ],
+    '5259_monitoramento': [
+      { action: 'Implementar monitoramento contínuo da qualidade dos dados de entrada para modelos de ML em produção.', effort: '4–8 sem', resp: 'IA / TI / Dados' },
+      { action: 'Configurar alertas para degradação de qualidade de dados, data drift e concept drift nos modelos de ML.', effort: '3–6 sem', resp: 'IA / TI' },
+      { action: 'Produzir relatórios regulares de qualidade de dados para ML apresentados às equipes responsáveis.', effort: 'Mensal', resp: 'IA / Dados / GRC' },
+    ],
+    '5259_melhoria': [
+      { action: 'Incorporar lições aprendidas de problemas de qualidade de dados aos processos de coleta e preparação.', effort: 'Pós-evento', resp: 'IA / Dados / Engenharia' },
+      { action: 'Investir em ferramentas e automação para melhoria da qualidade de dados para ML.', effort: '6–12 sem', resp: 'IA / TI / P&D' },
+      { action: 'Revisar e atualizar benchmarks de qualidade de dados para ML periodicamente.', effort: 'Anual', resp: 'IA / Dados / GRC' },
+    ],
+  },
+  iso5339: {
+    '5339_aplicacoes': [
+      { action: 'Adotar as diretrizes da ISO/IEC 5339 para identificar, avaliar e priorizar aplicações de IA com critérios estruturados.', effort: '4–6 sem', resp: 'IA / GRC / Negócios' },
+      { action: 'Documentar casos de uso de IA com objetivos, métricas de sucesso e critérios de aceitação definidos.', effort: '3–5 sem', resp: 'IA / Produto / GRC' },
+      { action: 'Gerenciar o portfólio de aplicações de IA com revisões periódicas de prioridade e status.', effort: 'Trimestral', resp: 'IA / Alta Direção / GRC' },
+    ],
+    '5339_desenvolvimento': [
+      { action: 'Incorporar princípios de IA responsável no processo de desenvolvimento e nas avaliações de impacto.', effort: '4–8 sem', resp: 'IA / GRC / Ética' },
+      { action: 'Realizar avaliações de impacto para aplicações de IA que afetam pessoas ou processos críticos.', effort: '4–8 sem', resp: 'IA / GRC / Jurídico' },
+      { action: 'Documentar decisões de design, limitações, riscos e medidas de mitigação de cada aplicação de IA.', effort: '3–5 sem', resp: 'IA / Engenharia / GRC' },
+    ],
+    '5339_implantacao': [
+      { action: 'Formalizar processo de aprovação para implantação de aplicações de IA incluindo revisão de riscos e conformidade.', effort: '3–5 sem', resp: 'IA / GRC / Alta Direção' },
+      { action: 'Documentar planos de operação de aplicações de IA com monitoramento, suporte e gestão de incidentes.', effort: '3–5 sem', resp: 'IA / TI / Operações' },
+      { action: 'Documentar e testar planos de contingência e rollback para aplicações de IA críticas.', effort: '4–6 sem', resp: 'IA / TI / GRC' },
+    ],
+    '5339_evolucao': [
+      { action: 'Implementar processo de atualização de aplicações de IA com avaliação de impacto e aprovação formal.', effort: '3–5 sem', resp: 'IA / GRC / Engenharia' },
+      { action: 'Definir critérios de descontinuação e gerenciar formalmente a retirada de aplicações de IA.', effort: '3–5 sem', resp: 'IA / GRC / Jurídico' },
+      { action: 'Manter registro histórico de aplicações de IA desenvolvidas, implantadas e descontinuadas.', effort: 'Contínuo', resp: 'IA / GRC / TI' },
     ],
   },
   iso42001: {
