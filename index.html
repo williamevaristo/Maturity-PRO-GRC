@@ -890,12 +890,9 @@
 <div class="app">
 
   <!-- Banner: em desenvolvimento -->
-  <div style="margin-bottom:24px;padding:22px 28px;border-radius:12px;background:#fffbeb;border:1px solid #fde68a;border-left:4px solid #f59e0b;display:flex;align-items:center;gap:18px;line-height:1.6">
-    <span style="font-size:2.4rem;flex-shrink:0">🚧</span>
-    <div>
-      <div style="font-size:1.2rem;font-weight:700;color:#78350f;margin-bottom:6px">Em Desenvolvimento</div>
-      <div style="font-size:1rem;color:#92400e">Novos frameworks e funcionalidades estão sendo preparados para as próximas versões da ferramenta. Os frameworks marcados com <strong>✨ Premium</strong> estarão disponíveis em breve. Fique atento às atualizações!</div>
-    </div>
+  <div style="margin-bottom:24px;padding:16px 24px;border-radius:12px;background:#fffbeb;border:1px solid #fde68a;border-left:4px solid #f59e0b;display:flex;align-items:center;gap:16px">
+    <span style="font-size:2rem;flex-shrink:0">🚧</span>
+    <div style="font-size:1.2rem;font-weight:700;color:#78350f">Em Desenvolvimento</div>
   </div>
 
   <header>
@@ -938,31 +935,6 @@
       <button class="btn-start" id="btnStart" onclick="startAssessment()" disabled>Iniciar Avaliação →</button>
     </div>
 
-    <div class="import-divider">modelo de preenchimento offline</div>
-    <div class="xlsx-download-block">
-      <div class="xl-icon">📊</div>
-      <div class="xl-text">
-        <div class="xl-title">Modelo Excel de Avaliação GRC</div>
-        <div class="xl-sub">Preencha offline com as notas de maturidade — inclui todos os frameworks com instruções de preenchimento</div>
-      </div>
-      <button class="btn-dl-xlsx" onclick="downloadXlsx()">↓ Baixar Modelo Excel</button>
-    </div>
-
-    <div class="xlsx-upload-zone" id="xlsxUploadZone"
-         ondragover="xlsxDragOver(event)"
-         ondragleave="xlsxDragLeave(event)"
-         ondrop="xlsxDrop(event)">
-      <input type="file" accept=".xlsx,.xls" onchange="xlsxFileInput(event)">
-      <div class="xlsx-upload-row">
-        <div class="xlsx-upload-icon">📥</div>
-        <div class="xlsx-upload-text">
-          <div class="xlsx-upload-title">Importar modelo Excel preenchido</div>
-          <div class="xlsx-upload-sub">Arraste o arquivo .xlsx preenchido ou clique para selecionar — as notas serão carregadas automaticamente</div>
-        </div>
-        <span class="btn-upload-xlsx">Selecionar .xlsx</span>
-      </div>
-      <div class="xlsx-upload-progress" id="xlsxProgress">⏳ Lendo planilha...</div>
-    </div>
   </div>
   <!-- STEP 2: Assessment -->
   <div id="stepAssessment" style="display:none">
@@ -3045,13 +3017,7 @@ function submitPremForm() {
 /* ══════════════════════════════════════════
    PREMIUM LOCK
 ══════════════════════════════════════════ */
-const PREMIUM_FWS = new Set([
-  'iso22313','iso22316','iso22320','iso22322','iso22325','iso22398',
-  'iso27001','iso27002','iso27003','iso27004','iso27005','iso27006','iso27017','iso27018','iso27032','iso27701',
-  'iso42001',
-  'coso','cobit','iso37000','iso37001','iso37301','iso37002','iso37008',
-  'cis','nist','lgpd',
-]);
+const PREMIUM_FWS = new Set([]);
 
 function isPremium(key) { return PREMIUM_FWS.has(key); }
 
