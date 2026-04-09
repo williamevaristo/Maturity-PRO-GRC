@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GRC Maturity Assessment v32.0</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=WOtA4-VyDZ3omoxFWfetjn4jWH-Z2mwMqP0JwuJ1hCVgCxSNzkvUW8SYvasT8C8ZdLaJyQ-tFqaxOfcPgozyUuKa7SblUt-sWJgiI7IypwmA8MFnNnRuHh1EeBjp_Wvqpy36ShfP7rFOp6SdWCiarcXx-AUkS3wNMTD4bTItNhu54rEWXqfKqLFWpCZJ5anUL7nUPthcsAGVhOd41DCT0jhtrR8RgD-tok_yk-NXluD1-wlr5b7kj25VZ9YEElhBbXm-tVh85OwSw1lux7IfRZzTs_qyKPYd8f50auePqNZP0FlSkA_zAixqCfWP4w4SCO3rIHumXYgLzPuzylsJtVDmWFtxbR9ihBwoW0m1Xl9NpjUPNeHdOjn5tUrjGqLvGZJHFxQPcaoA0nvrdtIiIww8_srjZi7hCS5uI6ZaLhEeNoyOCZd3cU9w98AFsXUEBi9Regotef-EDovwOEDopYabnB8mqN67y3rzPzJ5VpjEWUyUiCaBA0RvzXSt_tOxaatUivcddpi3Jj3PGn9xUU4ahWgT5rNZcbVnzwseIqH1XjGQJ_I9-HQcTnBUclGGhJrkTZCnC2f9--V1jU9XAxQERApce6XRtSrknIYFsfzZJIC6yZCgRTOz5fISVgerqfnuWtxDTvAc95NktbI5ymzN4EFl4vZ6doVQntv0KaWmSF2aTJx5b1-jutI1DChhFGI_N2iqNmtRi-cSwkCP465fy-WwOnDgmayis-Dzsm3tJeeCA7-xMujDHurv9VAuxknxq4Kjgh0PM12wN5pMENE_r6kfDGbqYDkJj2SmKSV7HyolNGY4-BDmeEBk5hnEyYutGavpclWgvOwd9E_v_IN4wGh9i4CNTeQZbgfT8g05yDu_a2q0af3YPwks6ruTlsoaMe86IS7ZaXYeFD2Lu2m1HauWvFp0tow0-ai5P8mll5T5Rq7PRri_rJ-3KX-gy23zo4PuY57lsbLJ8Q0Yqjo_OJyDElwp9qtsyex-F69jy1UZObQFw8CdO3pWiOJ9mlYQgRX7Jn0KuLi6lGqNMF6Bl_LjmWjePMB9y9B4GnZuVlD42zTXfNTD6NhFooi9lnmEs4TZDTRIcf6j5Yjf2WucG_EBIbnHKhUBXbQUAE3f2t8WCHFeglLYXT8QbgXAkYoM1AXhCJNH9nX9YcERiuuSAlJqq9dGQ7foWiiEY1C_hS_3jit2pNaCRJB1uucDSzelqKhwKuHPspMgAory6odBlyQqiAf1w-t00z8cyoQ7yPpWifvFI-u-WR1P2UVhCautZMCIRmu7Fy9Kjpy-dGeq9htIn5w12m47iYEVqZH9WVyLh0pcN0lWYMjhIIoQEDwICpjeiSA5g_JogMEATLaewJ2MgTRuyv75iuxXzxStnuoVG3Rf7edcPdVRDjeAVDzEkcLXjSEPt_EOFQ5Q5rdZGJZfZGfv-_uytUFNzxhanpXQfjLwGNoj58EUOTpKXEcGfzu1E_qumkC9Z9mwgMjzFqpx4na32WjYnO0M0vdAuQWwuHaLQKVsI_LnfQwMY3YPRcKKWP_ppmwX1lyBrOwivFBFgyOhjPX3EPvdpNXdSCIaY-F0WRbsExpYPxaDKIPgx3rGvf0y6vxFG8N3P2sQjublx1PgeLg53S2e65XbViswRXr748O_ApzNbPf3" nonce="567624489c47c029c917d10fe56365ce" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9tYWlsLWF0dGFjaG1lbnQuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2F0dGFjaG1lbnQvdS8wLz91aT0yJmlrPTJiNjg5MmRlN2MmYXR0aWQ9MC4xJnBlcm1tc2dpZD1tc2ctZjoxODYxOTIxNDc0MDQ2NDgyNjg5JnRoPTE5ZDZkZmI3M2MzNjU5MDEmdmlldz1hdHQmencmZGlzcD1zYWZlJnNhZGRiYXQ9QU5HamRKXzV6Z2IzRWRkUW56VkhSUzF2dWRhWUp3a0VsWFA5WDZ0WDRBYUVOYmhDZG1fMUdodDIwa0RwbXJURTBEbF9UMm1FLVlKM3VELURBVDhRYVBoaEo5dmJXZHZ5alItd0pmY1Q2NGIxNEpoU0ZaUjlkeUt6SVc2MmpFTGZLMGVXVFFDSmNfTTBIeW5PbXFtNmtfVWxVWFlIS0xOcUZYVXZYTkN5RDNLOEc5TlI5bVFLWDFnYW9Mc0RLNEdXVEpWMVBFMzhrWmlVakR0WUE5UjR5aXFBOEhxUjZtMkZNR1NoZ0hPZEZNd0tQWk1fNXhiRGRxYzF0am5MdmpEZExuTzBobFE0U0MwRTZsOGplekxjRDhHZjZhTkJFd3hPZFk3V003b2Z5ZmlQVElWQVRtY1IxYXhxbzE5THBQWllLLWZIOWJqNGFCNzRwaUVKQWpBdEZHc0cyclNOMW15WFMyUlFLOFBlVDRLQVJWY1ROZHUxZklzNUFqenZ5S003amdFeUY4Mm90Q0ZCNGprNXU5OE45VlZsQmhzbVU4VnNCZmJqREFmVEpGekg2cVhnNDNzUlpYeUZ2SS1PYVE0OFpxNUVoUXYwbTlDQlppbi1rRUdybjY4ckwtenFJWlNoT2NQb004Wi1EVi04UHBaOFZydDV0SFRsVE9OMm5haTJkczgxZkdJTm5oRlVYV1ZveWlSdHdKekdnd1lqY2dDQ2ZyWEgyYWktOGxVRzFzMjAwMUtfQTlhZXVhSHpiSmdZNTBWSlRRWEVSaVEzUTZXTmJfZTAxelhBWVllWnRWWjBCMWd4VGY1N1lwNms0WjRDRXBEREhEejRQRUFkbGZ4UldSeHpNOTNuQlJiZGRIQ21vaE9lZV9yM2FMWXR4TzJ2d1RTRWpEUUgxRE84VVdaUTllTHpPZEVUakhoMnF5dVBaemUxR3VHd3RFNmVDbVBaU1Fab2tfMzNVWnR0Vl96bmUtQktxOWprUS1jZ0ZHdHgtbHBnaENoMlRCTDBSNHcxWVdETF9GbEZHLWxseVQ2RlExSF94WmtnOUh4NE40QlRoeDlDTlZNRWlOUUJBRi0xWFBoWFYyU2Y2ZDJ3bmRZWUp1QlpYNU9LNkNvSEk1blBGY0JrMlVjdmVQT01FVjlKUTd1d1h5c1ZNNDZ4ZlFHMjIteS14b2h1Z2ltYlNOci1kdGsxa1NfS2FKZms4cFJkR1o1UktHWGozbno4dXMyZmxkX3JyaVB4aXRTem5xTzBkS1FMbUZCaF9TSGlNRjZuVmxIY2ROMWpTcmM4RWtCZ1Bfc1lMUU5sM0lKOUtPUS1tVE5FNWs4VzJTN3JtdC1XT294LUN2ZndhSlRkdjFwSHllaDFXeUZweEJFdTI1VEt4RTB3"/><script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <style>
   :root {
@@ -36,11 +36,14 @@
     --iso37301: #1e40af;
     --iso37002: #1e40af;
     --iso37008: #1e40af;
+    --iso37003b: #1e40af;
     --nist:     #a8200d;
     --lgpd:     #15643b;
     --cis:      #0e4f8a;
     --iso42001: #6d28d9;
     --ai_std: #6d28d9;
+    --ieee15288: #6d28d9;
+    --iso56001: #0891b2;
     --iso22301: #0369a1;
     --iso22313: #0369a1;
     --iso22320: #0369a1;
@@ -226,6 +229,9 @@
   .fw-tab[data-fw="iso37301"] { --fw-color: var(--iso37301); }
   .fw-tab[data-fw="iso37002"] { --fw-color: var(--iso37002); }
   .fw-tab[data-fw="iso37008"] { --fw-color: var(--iso37008); }
+  .fw-tab[data-fw="iso37003b"] { --fw-color: var(--iso37003b); }
+  .fw-tab[data-fw="ieee15288"] { --fw-color: var(--ieee15288); }
+  .fw-tab[data-fw="iso56001"]  { --fw-color: var(--iso56001); }
   .fw-tab[data-fw="nist"]     { --fw-color: var(--nist); }
   .fw-tab[data-fw="lgpd"]     { --fw-color: var(--lgpd); }
   .fw-tab[data-fw="cis"]      { --fw-color: var(--cis); }
@@ -925,6 +931,7 @@
         <option value="governanca">🏛️ Governança Corporativa e Organizacional</option>
         <option value="ciberseguranca">🛡️ Cibersegurança</option>
         <option value="privacidade">🔏 Privacidade e Dados</option>
+        <option value="inovacao">💡 Gestão de Inovação</option>
       </select>
       <span class="family-filter-count" id="familyFilterCount"><strong>37</strong> frameworks</span>
     </div>
@@ -2713,6 +2720,138 @@ const FRAMEWORKS = {
       },
     ]
   },
+  ieee15288: {
+    label: 'ISO/IEC/IEEE 15288',
+    subtitle: 'Processos do Ciclo de Vida de Sistemas',
+    color: '#6d28d9',
+    group: 'tecnologia',
+    sections: [
+      {
+        id: '15288_acordo', title: 'Processos de Acordo e Habilitação Organizacional', desc: 'Aquisição, fornecimento e infraestrutura para ciclo de vida de sistemas',
+        questions: [
+          'A organização possui processos formais de aquisição de sistemas alinhados à ISO/IEC/IEEE 15288, cobrindo requisitos, contratos e verificação.',
+          'Processos de fornecimento de sistemas estão definidos com acordos, planos e controles de conformidade documentados.',
+          'A infraestrutura organizacional necessária para suportar os processos do ciclo de vida de sistemas está implementada.',
+          'Processos de gestão do portfólio de projetos de sistemas são executados com critérios de priorização e monitoramento.',
+        ]
+      },
+      {
+        id: '15288_projeto', title: 'Processos de Gestão Técnica de Projetos', desc: 'Planejamento, avaliação e controle de projetos de sistemas',
+        questions: [
+          'Planos de projeto para sistemas incluem definição de processos do ciclo de vida, estimativas, cronograma e recursos.',
+          'O desempenho dos projetos de sistemas é avaliado e controlado continuamente em relação ao planejado.',
+          'Processos formais de gestão de decisões técnicas em projetos de sistemas estão implementados e documentados.',
+          'Gestão de riscos de projetos de sistemas é realizada de forma sistemática com identificação, análise e tratamento documentados.',
+        ]
+      },
+      {
+        id: '15288_tecnico', title: 'Processos Técnicos de Engenharia de Sistemas', desc: 'Definição, realização, verificação e validação de sistemas',
+        questions: [
+          'Processos de análise e definição de requisitos de sistemas estão implementados com rastreabilidade e gestão de mudanças.',
+          'Arquitetura de sistemas é definida, avaliada e documentada por processo formal com critérios de decisão explícitos.',
+          'Processos de implementação, integração, verificação e validação de sistemas cobrem todos os elementos e interfaces.',
+          'Processos de operação, manutenção e descontinuação de sistemas estão formalizados e executados conforme planejado.',
+        ]
+      },
+      {
+        id: '15288_melhoria', title: 'Adaptação, Conformidade e Melhoria de Processos', desc: 'Adaptação dos processos, conformidade e melhoria contínua',
+        questions: [
+          'A organização adapta formalmente os processos da ISO/IEC/IEEE 15288 ao seu contexto com justificativas documentadas.',
+          'A conformidade dos processos do ciclo de vida de sistemas com os planos e normas aplicáveis é verificada periodicamente.',
+          'Avaliações de maturidade e capacidade dos processos de engenharia de sistemas são realizadas e utilizadas para melhoria.',
+          'Lições aprendidas de projetos de sistemas são sistematicamente incorporadas à melhoria dos processos da organização.',
+        ]
+      },
+    ]
+  },
+  l13709: {
+    label: 'Lei 13.709/2018',
+    subtitle: 'LGPD — Requisitos Legais',
+    color: '#10b981',
+    group: 'privacidade',
+    sections: [
+      {
+        id: 'l13709_principios', title: 'Princípios e Bases Legais (Arts. 6º e 7º)', desc: 'Conformidade com os princípios e hipóteses legais de tratamento de dados pessoais',
+        questions: [
+          'A organização aplica os 10 princípios da LGPD (finalidade, adequação, necessidade, livre acesso, qualidade, transparência, segurança, prevenção, não discriminação, responsabilização) em todas as operações de tratamento.',
+          'Cada operação de tratamento de dados pessoais está amparada em uma das 10 bases legais do Art. 7º (ou Art. 11º para dados sensíveis) devidamente documentada.',
+          'O princípio da minimização de dados (necessidade) é aplicado, coletando apenas os dados estritamente necessários à finalidade.',
+          'A finalidade do tratamento é determinada, explícita, legítima e comunicada ao titular antes ou no momento da coleta.',
+        ]
+      },
+      {
+        id: 'l13709_titulares', title: 'Direitos dos Titulares (Arts. 17 a 22)', desc: 'Atendimento dos direitos previstos nos artigos 17 a 22 da LGPD',
+        questions: [
+          'A organização possui processo formal para atender os 9 direitos dos titulares previstos no Art. 18 (confirmação, acesso, correção, anonimização/bloqueio/eliminação, portabilidade, informação sobre compartilhamento, revogação do consentimento, revisão de decisão automatizada e petição à ANPD).',
+          'Os prazos de atendimento às solicitações dos titulares são monitorados e cumpridos (15 dias corridos conforme regulamentação da ANPD).',
+          'A organização possui canal de comunicação dedicado e de fácil acesso para o exercício dos direitos dos titulares.',
+          'Quando o titular é menor de 16 anos, o tratamento de dados é realizado apenas com consentimento específico de pelo menos um dos pais ou responsável legal.',
+        ]
+      },
+      {
+        id: 'l13709_encarregado', title: 'Encarregado (DPO) e Governança (Arts. 37 a 43)', desc: 'Designação do DPO, programa de governança e responsabilidades do controlador e operador',
+        questions: [
+          'O Encarregado pelo Tratamento de Dados (DPO) está formalmente designado, com suas informações publicadas de forma clara e acessível (Art. 41).',
+          'O DPO exerce as atribuições previstas no Art. 41: aceitar reclamações, comunicar-se com titulares e ANPD, orientar colaboradores e adotar providências.',
+          'A organização implementou programa de governança em privacidade que atende aos requisitos do Art. 50, §2º (comprometimento da direção, treinamento, auditorias, planos de resposta e monitoramento contínuo).',
+          'Contratos com operadores (Art. 39) e suboperadores preveem responsabilidades de proteção de dados e são verificados periodicamente.',
+        ]
+      },
+      {
+        id: 'l13709_incidentes', title: 'Segurança, Incidentes e Sanções (Arts. 46 a 52)', desc: 'Medidas de segurança, comunicação de incidentes e conformidade com o regime sancionador',
+        questions: [
+          'A organização adota medidas técnicas e administrativas de segurança aptas a proteger os dados pessoais contra acessos não autorizados e situações acidentais ou ilícitas (Art. 46).',
+          'Processo formal de detecção, avaliação e comunicação de incidentes de segurança à ANPD e aos titulares está implementado dentro dos prazos regulamentares (Art. 48).',
+          'A organização realizou o Relatório de Impacto à Proteção de Dados (RIPD) para as operações de tratamento de alto risco identificadas (Art. 38).',
+          'A organização monitora o regime de sanções da LGPD (Art. 52) e está preparada para responder a fiscalizações e processos administrativos da ANPD.',
+        ]
+      },
+    ]
+  },
+  iso56001: {
+    label: 'ISO 56001',
+    subtitle: 'Sistema de Gestão de Inovação',
+    color: '#0891b2',
+    group: 'inovacao',
+    sections: [
+      {
+        id: '56001_contexto', title: 'Contexto e Liderança para Inovação', desc: 'Ambiente organizacional, liderança e política de inovação',
+        questions: [
+          'A organização definiu seu contexto de inovação, incluindo intenção de inovação, oportunidades e partes interessadas relevantes.',
+          'A alta direção demonstra liderança e comprometimento com a inovação, estabelecendo política e alocando recursos adequados.',
+          'Uma política de inovação formal está aprovada, comunicada e alinhada à estratégia organizacional.',
+          'O escopo do Sistema de Gestão de Inovação (SGI) está definido considerando produtos, serviços, processos e modelos de negócio.',
+        ]
+      },
+      {
+        id: '56001_estrategia', title: 'Estratégia e Portfólio de Inovação', desc: 'Direção estratégica, portfólio e oportunidades de inovação',
+        questions: [
+          'A estratégia de inovação está alinhada à estratégia organizacional com objetivos de inovação definidos e mensuráveis.',
+          'Um portfólio de iniciativas de inovação é gerenciado formalmente com critérios de seleção, priorização e avaliação de valor.',
+          'Processos de identificação e captura de oportunidades de inovação estão implementados e operacionais.',
+          'A organização gerencia colaborações e parcerias externas de inovação com acordos formais e gestão de propriedade intelectual.',
+        ]
+      },
+      {
+        id: '56001_operacao', title: 'Operação e Processos de Inovação', desc: 'Execução de iniciativas e processos operacionais de inovação',
+        questions: [
+          'Processos de inovação (ideação, desenvolvimento, experimentação, implantação) estão formalizados e sendo executados.',
+          'Recursos para inovação (pessoas, tempo, financiamento, infraestrutura, conhecimento) estão alocados adequadamente.',
+          'A gestão do conhecimento e da propriedade intelectual gerada nas iniciativas de inovação é realizada formalmente.',
+          'A organização fomenta ativamente uma cultura que encoraja criatividade, experimentação e tolerância ao risco calculado.',
+        ]
+      },
+      {
+        id: '56001_melhoria', title: 'Avaliação de Desempenho e Melhoria Contínua', desc: 'Monitoramento, avaliação e melhoria do SGI',
+        questions: [
+          'Indicadores de desempenho de inovação (KPIs) estão definidos, medidos e reportados à alta direção.',
+          'O valor realizado pelas iniciativas de inovação é avaliado e documentado em comparação com os objetivos estabelecidos.',
+          'Auditorias internas do SGI são realizadas conforme programa definido e seus resultados são tratados formalmente.',
+          'A análise crítica do SGI pela alta direção ocorre periodicamente e gera decisões de melhoria documentadas.',
+        ]
+      },
+    ]
+  },
   coso: {
     label: 'COSO',
     subtitle: 'Controles Internos / ERM',
@@ -3017,6 +3156,50 @@ const FRAMEWORKS = {
           'Lições aprendidas de investigações concluídas são sistematicamente incorporadas às políticas e controles organizacionais.',
           'Métricas da função investigativa (volume, prazo, tipos de caso) são monitoradas e reportadas ao órgão de governança.',
           'A função de investigações internas é revisada e aprimorada continuamente com base em boas práticas e mudanças regulatórias.',
+        ]
+      },
+    ]
+  },
+  iso37003b: {
+    label: 'ISO 37003',
+    subtitle: 'Sistema de Gestão de Controle de Fraudes',
+    color: '#1e40af',
+    group: 'governanca',
+    sections: [
+      {
+        id: '37003b_prevencao', title: 'Prevenção à Fraude', desc: 'Controles preventivos e cultura de combate à fraude organizacional',
+        questions: [
+          'A organização possui um Sistema de Gestão de Controle de Fraudes (SGCF) formalmente estabelecido baseado na ISO 37003.',
+          'Uma avaliação formal de riscos de fraude (interna e externa) está documentada e revisada periodicamente.',
+          'Controles preventivos proporcionais aos riscos de fraude identificados estão implementados e monitorados.',
+          'Uma cultura organizacional de integridade e combate à fraude é promovida ativamente pela alta direção.',
+        ]
+      },
+      {
+        id: '37003b_deteccao', title: 'Detecção de Fraudes', desc: 'Mecanismos de identificação e detecção de atividades fraudulentas',
+        questions: [
+          'Mecanismos formais de detecção de fraudes (monitoramento, análise de dados, alertas) estão implementados e operacionais.',
+          'Canal de denúncias para reporte de suspeitas de fraude está disponível, é confidencial e acessível a todos.',
+          'Indicadores de alerta (red flags) para diferentes tipos de fraude estão definidos e são monitorados continuamente.',
+          'A organização realiza auditorias e revisões periódicas específicas para detecção de fraudes em áreas de maior risco.',
+        ]
+      },
+      {
+        id: '37003b_resposta', title: 'Resposta a Incidentes de Fraude', desc: 'Processos de investigação, resposta e recuperação após fraudes',
+        questions: [
+          'Procedimento formal de resposta a incidentes de fraude está documentado com papéis, prazos e critérios definidos.',
+          'Investigações de suspeitas de fraude são conduzidas por equipe qualificada e independente com preservação de evidências.',
+          'A organização possui processo para notificação de autoridades competentes quando fraudes são confirmadas.',
+          'Medidas de recuperação de ativos e ações corretivas são implementadas após cada incidente de fraude confirmado.',
+        ]
+      },
+      {
+        id: '37003b_melhoria', title: 'Governança e Melhoria Contínua do SGCF', desc: 'Liderança, monitoramento e evolução do sistema de controle de fraudes',
+        questions: [
+          'A alta direção demonstra comprometimento com o SGCF, alocando recursos e revisando periodicamente sua eficácia.',
+          'Indicadores de desempenho do SGCF são definidos, monitorados e reportados ao órgão de governança.',
+          'Lições aprendidas de incidentes de fraude são incorporadas aos controles e processos do SGCF.',
+          'O SGCF é auditado internamente conforme programa definido e as não-conformidades são tratadas formalmente.',
         ]
       },
     ]
@@ -3537,8 +3720,9 @@ function renderFwSelector() {
     governanca:    '🏛️ Governança Corporativa e Organizacional',
     ciberseguranca:'🛡️ Cibersegurança',
     privacidade:   '🔏 Privacidade e Dados',
+    inovacao:      '💡 Gestão de Inovação',
   };
-  const GROUP_ORDER = ['iso22','iso27','riscos','tecnologia','governanca','ciberseguranca','privacidade'];
+  const GROUP_ORDER = ['iso22','iso27','riscos','tecnologia','inovacao','governanca','ciberseguranca','privacidade'];
 
   let html = '';
   // Render in defined family order, applying family filter
@@ -3941,6 +4125,24 @@ function getRec(score, fw, secId) {
       '37002_triagem':  'Documente processo de triagem com critérios de aceitação, prazos definidos e investigação por equipe qualificada e independente.',
       '37002_melhoria': 'Analise tendências das denúncias, reporte ao órgão de governança e avalie regularmente a eficácia do canal.',
     },
+    ieee15288: {
+      '15288_acordo':   'Formalize processos de aquisição e fornecimento de sistemas com requisitos, contratos e infraestrutura organizacional.',
+      '15288_projeto':  'Implemente planejamento, controle e gestão de riscos de projetos de sistemas com monitoramento contínuo.',
+      '15288_tecnico':  'Adote processos técnicos de engenharia de sistemas cobrindo requisitos, arquitetura, verificação e validação.',
+      '15288_melhoria': 'Adapte os processos ao contexto, verifique conformidade e incorpore lições aprendidas à melhoria contínua.',
+    },
+    iso56001: {
+      '56001_contexto':   'Defina o contexto de inovação, obtenha liderança comprometida, aprove política de inovação e delimite o escopo do SGI.',
+      '56001_estrategia': 'Alinhe a estratégia de inovação ao negócio, gerencie portfólio formalmente e formalize parcerias e gestão de PI.',
+      '56001_operacao':   'Formalize processos de inovação, aloque recursos adequados e cultive cultura que encoraje criatividade e experimentação.',
+      '56001_melhoria':   'Defina KPIs de inovação, avalie valor realizado, realize auditorias internas e conduza análise crítica pela direção.',
+    },
+    iso37003b: {
+      '37003b_prevencao': 'Estabeleça o SGCF baseado na ISO 37003, realize avaliação de riscos de fraude e implemente controles preventivos proporcionais.',
+      '37003b_deteccao':  'Implemente mecanismos de detecção com monitoramento contínuo, canal de denúncias e red flags definidos por tipo de fraude.',
+      '37003b_resposta':  'Documente procedimento de resposta a fraudes, estruture equipe de investigação independente e formalize notificação às autoridades.',
+      '37003b_melhoria':  'Monitore indicadores do SGCF, incorpore lições aprendidas e realize auditorias internas periódicas com reporte à governança.',
+    },
     iso37008: {
       '37008_estrutura': 'Estruture formalmente a função investigativa com investigadores qualificados, independentes e com acesso irrestrito às informações.',
       '37008_processo':  'Documente procedimento de investigação com coleta de evidências, contraditório e prazos definidos para conclusão.',
@@ -3964,6 +4166,12 @@ function getRec(score, fw, secId) {
       protect:          'Implemente controles de acesso por menor privilégio, criptografia e programa contínuo de conscientização.',
       detect:           'Implemente monitoramento contínuo, centralização de logs e ferramentas SIEM para detecção de ameaças.',
       respond_recover:  'Documente, teste e atualize os planos de resposta e recuperação de incidentes cibernéticos.',
+    },
+    l13709: {
+      'l13709_principios': 'Documente as bases legais para cada operação de tratamento e aplique os 10 princípios da LGPD com evidências formais.',
+      'l13709_titulares':  'Implemente processo formal para atendimento dos 9 direitos do Art. 18, com canal dedicado e prazos monitorados.',
+      'l13709_encarregado':'Designe e publique o DPO, implemente programa de governança conforme Art. 50 §2º e formalize contratos com operadores.',
+      'l13709_incidentes': 'Adote medidas de segurança, implemente processo de comunicação de incidentes à ANPD e realize RIPD para operações de alto risco.',
     },
     lgpd: {
       bases:            'Mapeie todas as operações de tratamento de dados, documente as bases legais e o ciclo de vida dos dados.',
@@ -4318,6 +4526,72 @@ const AP_ACTIONS = {
       { action: 'Avaliar regularmente a eficácia e acessibilidade do canal com base em métricas e feedback coletados.', effort: 'Anual', resp: 'Compliance / GRC' },
     ],
   },
+  ieee15288: {
+    '15288_acordo': [
+      { action: 'Formalizar processos de aquisição de sistemas com requisitos, critérios de seleção e verificação de fornecedores.', effort: '4–8 sem', resp: 'Engenharia / Compras / GRC' },
+      { action: 'Definir e documentar processos de fornecimento de sistemas com acordos, planos e controles de conformidade.', effort: '4–6 sem', resp: 'Engenharia / TI / Jurídico' },
+      { action: 'Implementar infraestrutura organizacional para suporte aos processos do ciclo de vida de sistemas.', effort: '6–10 sem', resp: 'Engenharia / TI / GRC' },
+    ],
+    '15288_projeto': [
+      { action: 'Implementar planejamento de projetos de sistemas incluindo definição do ciclo de vida, estimativas e cronograma.', effort: '4–6 sem', resp: 'PMO / Engenharia / GRC' },
+      { action: 'Estruturar processos de avaliação e controle contínuo do desempenho de projetos de sistemas.', effort: '3–5 sem', resp: 'PMO / Engenharia' },
+      { action: 'Implementar gestão de riscos de projetos de sistemas com identificação, análise e tratamento documentados.', effort: '3–5 sem', resp: 'PMO / GRC / Engenharia' },
+    ],
+    '15288_tecnico': [
+      { action: 'Implementar processos de análise e definição de requisitos de sistemas com rastreabilidade e gestão de mudanças.', effort: '4–8 sem', resp: 'Engenharia / Produto / GRC' },
+      { action: 'Formalizar processo de definição de arquitetura de sistemas com critérios de avaliação e decisão explícitos.', effort: '4–8 sem', resp: 'Arquitetura / Engenharia' },
+      { action: 'Implementar processos de verificação e validação cobrindo todos os elementos e interfaces do sistema.', effort: '4–8 sem', resp: 'Engenharia / Qualidade / TI' },
+    ],
+    '15288_melhoria': [
+      { action: 'Adaptar formalmente os processos da ISO/IEC/IEEE 15288 ao contexto da organização com justificativas documentadas.', effort: '3–6 sem', resp: 'Engenharia / GRC / Qualidade' },
+      { action: 'Verificar periodicamente a conformidade dos processos de ciclo de vida com planos e normas aplicáveis.', effort: 'Semestral', resp: 'Auditoria / Engenharia / GRC' },
+      { action: 'Realizar avaliações de maturidade dos processos de engenharia de sistemas e elaborar plano de melhoria.', effort: 'Anual', resp: 'Engenharia / GRC / Alta Direção' },
+    ],
+  },
+  iso56001: {
+    '56001_contexto': [
+      { action: 'Definir o contexto de inovação com intenção, oportunidades e partes interessadas relevantes formalmente documentados.', effort: '3–5 sem', resp: 'Alta Direção / Inovação / GRC' },
+      { action: 'Elaborar e aprovar política de inovação com comprometimento da alta direção e comunicação a toda a organização.', effort: '2–4 sem', resp: 'Alta Direção / Inovação / Comunicação' },
+      { action: 'Delimitar o escopo do SGI cobrindo produtos, serviços, processos e modelos de negócio relevantes.', effort: '2–4 sem', resp: 'Alta Direção / Inovação / GRC' },
+    ],
+    '56001_estrategia': [
+      { action: 'Definir estratégia de inovação alinhada ao negócio com objetivos mensuráveis e horizonte temporal definido.', effort: '4–6 sem', resp: 'Alta Direção / Inovação / Estratégia' },
+      { action: 'Implementar gestão formal do portfólio de inovação com critérios de seleção, priorização e avaliação de valor.', effort: '4–8 sem', resp: 'Inovação / GRC / Financeiro' },
+      { action: 'Formalizar parcerias e colaborações externas de inovação com acordos e gestão de propriedade intelectual.', effort: '4–8 sem', resp: 'Inovação / Jurídico / Parcerias' },
+    ],
+    '56001_operacao': [
+      { action: 'Formalizar processos de inovação (ideação, desenvolvimento, experimentação, implantação) com responsáveis definidos.', effort: '4–8 sem', resp: 'Inovação / Operações / GRC' },
+      { action: 'Alocar recursos dedicados à inovação (pessoas, tempo, financiamento, infraestrutura, conhecimento) formalmente.', effort: '3–6 sem', resp: 'Alta Direção / Inovação / Financeiro' },
+      { action: 'Desenvolver programa de cultura de inovação que encoraje criatividade, experimentação e tolerância ao risco calculado.', effort: '6–12 sem', resp: 'RH / Inovação / Alta Direção' },
+    ],
+    '56001_melhoria': [
+      { action: 'Definir KPIs de inovação e estruturar reporte periódico de desempenho e valor realizado à alta direção.', effort: '3–5 sem', resp: 'Inovação / GRC / Alta Direção' },
+      { action: 'Realizar auditorias internas do SGI com programa definido e tratamento formal das não-conformidades.', effort: '4–6 sem', resp: 'Auditoria Interna / Inovação / GRC' },
+      { action: 'Conduzir análise crítica periódica do SGI pela alta direção com decisões de melhoria documentadas.', effort: 'Semestral', resp: 'Alta Direção / Inovação / GRC' },
+    ],
+  },
+  iso37003b: {
+    '37003b_prevencao': [
+      { action: 'Estabelecer o SGCF baseado na ISO 37003 com política, escopo, papéis e recursos formalmente definidos e aprovados.', effort: '3–5 sem', resp: 'Compliance / GRC / Alta Direção' },
+      { action: 'Realizar avaliação formal de riscos de fraude interna e externa com priorização e plano de tratamento documentado.', effort: '4–8 sem', resp: 'GRC / Auditoria / Compliance' },
+      { action: 'Implementar controles preventivos de fraude proporcionais ao risco com monitoramento de eficácia definido.', effort: '6–10 sem', resp: 'Compliance / Controles Internos / GRC' },
+    ],
+    '37003b_deteccao': [
+      { action: 'Implementar mecanismos de detecção de fraude com monitoramento contínuo e análise de dados em áreas de risco.', effort: '4–8 sem', resp: 'Auditoria / TI / Compliance' },
+      { action: 'Estabelecer canal de denúncias confidencial específico para fraudes, acessível a todos os colaboradores e terceiros.', effort: '3–5 sem', resp: 'Compliance / GRC / TI' },
+      { action: 'Definir e monitorar red flags de fraude para cada área de risco com alertas e revisões periódicas.', effort: '4–6 sem', resp: 'Auditoria / Compliance / GRC' },
+    ],
+    '37003b_resposta': [
+      { action: 'Documentar procedimento formal de resposta a fraudes com papéis, prazos, critérios e fluxo de decisão definidos.', effort: '3–5 sem', resp: 'Compliance / Jurídico / GRC' },
+      { action: 'Estruturar equipe de investigação qualificada e independente com competência em forense financeiro e digital.', effort: '4–8 sem', resp: 'Compliance / Auditoria / Jurídico' },
+      { action: 'Estabelecer processo de notificação às autoridades e implementar medidas de recuperação de ativos após fraudes confirmadas.', effort: '3–5 sem', resp: 'Jurídico / Compliance / GRC' },
+    ],
+    '37003b_melhoria': [
+      { action: 'Definir indicadores de desempenho do SGCF e estruturar reporte periódico ao órgão de governança.', effort: '3–5 sem', resp: 'Compliance / GRC / Alta Direção' },
+      { action: 'Incorporar sistematicamente lições aprendidas de incidentes de fraude aos controles e processos do SGCF.', effort: 'Pós-evento', resp: 'Compliance / GRC / Auditoria' },
+      { action: 'Estruturar programa de auditorias internas do SGCF com periodicidade e escopo definidos.', effort: '4–6 sem', resp: 'Auditoria Interna / Compliance' },
+    ],
+  },
   iso37008: {
     '37008_estrutura': [
       { action: 'Estruturar formalmente a função de investigações internas com papéis, autoridades, recursos e acesso irrestrito definidos.', effort: '4–8 sem', resp: 'Compliance / Auditoria / Alta Direção' },
@@ -4426,6 +4700,28 @@ const AP_ACTIONS = {
       { action: 'Elaborar, aprovar e comunicar o Plano de Resposta a Incidentes Cibernéticos (IRP).', effort: '4–8 sem', resp: 'CISO / CSIRT' },
       { action: 'Realizar exercícios de simulação (tabletop exercises) de incidentes cibernéticos ao menos anualmente.', effort: 'Semestral', resp: 'CSIRT / Diretoria' },
       { action: 'Elaborar e testar plano de recuperação de ambientes críticos com RTO e RPO definidos.', effort: '8–16 sem', resp: 'TI / BCP' },
+    ],
+  },
+  l13709: {
+    'l13709_principios': [
+      { action: 'Mapear todas as operações de tratamento de dados pessoais e documentar a base legal aplicável a cada uma (Art. 7º e 11º).', effort: '6–10 sem', resp: 'DPO / Jurídico / GRC' },
+      { action: 'Implementar política de minimização de dados garantindo coleta apenas do estritamente necessário à finalidade declarada.', effort: '4–6 sem', resp: 'DPO / TI / GRC' },
+      { action: 'Documentar e comunicar as finalidades de tratamento de forma específica, explícita e legítima aos titulares antes da coleta.', effort: '3–5 sem', resp: 'DPO / Comunicação / Jurídico' },
+    ],
+    'l13709_titulares': [
+      { action: 'Implementar processo formal para atendimento dos 9 direitos do Art. 18 com fluxos, prazos e responsáveis definidos.', effort: '4–8 sem', resp: 'DPO / TI / Atendimento' },
+      { action: 'Criar e divulgar canal de fácil acesso para exercício dos direitos dos titulares com monitoramento de SLA de 15 dias.', effort: '3–5 sem', resp: 'DPO / TI / Comunicação' },
+      { action: 'Implementar controles específicos para tratamento de dados de menores de 16 anos com consentimento parental documentado.', effort: '3–6 sem', resp: 'DPO / Jurídico / TI' },
+    ],
+    'l13709_encarregado': [
+      { action: 'Designar formalmente o Encarregado (DPO) e publicar seus dados de contato de forma clara e acessível conforme Art. 41.', effort: '2–3 sem', resp: 'Alta Direção / DPO / Comunicação' },
+      { action: 'Implementar programa de governança em privacidade atendendo todos os elementos do Art. 50 §2º com evidências documentadas.', effort: '6–10 sem', resp: 'DPO / GRC / Alta Direção' },
+      { action: 'Revisar e adequar contratos com operadores e suboperadores para incluir cláusulas de proteção de dados (Art. 39).', effort: '4–8 sem', resp: 'DPO / Jurídico / Compras' },
+    ],
+    'l13709_incidentes': [
+      { action: 'Implementar medidas técnicas e administrativas de segurança adequadas ao risco de cada operação de tratamento (Art. 46).', effort: '6–10 sem', resp: 'TI / CISO / DPO' },
+      { action: 'Estruturar processo de comunicação de incidentes à ANPD e aos titulares dentro dos prazos regulamentares (Art. 48).', effort: '3–5 sem', resp: 'DPO / Jurídico / TI' },
+      { action: 'Realizar e documentar RIPD para operações de tratamento de alto risco identificadas conforme Art. 38 e regulamentação ANPD.', effort: '6–10 sem', resp: 'DPO / GRC / Áreas' },
     ],
   },
   lgpd: {
